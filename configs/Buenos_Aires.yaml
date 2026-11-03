@@ -1,0 +1,8 @@
+city: Buenos Aires
+data_root: argentina/ciudad-autónoma-de-buenos-aires/buenos-aires
+currency: ARS
+snapshots: [2025-09-27, 2025-12-29, 2026-03-30, 2026-06-29]
+qa:
+kpi:
+llm:
+seed:
