@@ -1,7 +1,7 @@
 """Tải và kiểm tra dữ liệu thô từ Inside Airbnb theo config của nhóm.
 
 Cách chạy (từ thư mục gốc của repo):
-    python src/download.py                          # dùng configs/paris.yaml
+    python src/download.py                          # dùng configs/Buenos_Aires.yaml
     python src/download.py --config configs/paris.yaml
     python src/download.py --force                  # tải lại kể cả khi tệp đã có
     python src/download.py --check-only             # chỉ kiểm tra tệp đã tải, không tải mới
@@ -135,7 +135,7 @@ def download_file(session: requests.Session, url: str, dest: Path) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--config", default="configs/paris.yaml")
+    parser.add_argument("--config", default="configs/Buenos_Aires.yaml")
     parser.add_argument("--force", action="store_true", help="tải lại tệp đã tồn tại")
     parser.add_argument("--check-only", action="store_true",
                         help="chỉ kiểm tra tệp đã có, không tải")
