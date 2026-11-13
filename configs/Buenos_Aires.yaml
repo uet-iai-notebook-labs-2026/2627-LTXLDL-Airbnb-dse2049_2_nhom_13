@@ -2,7 +2,22 @@ city: Buenos Aires
 data_root: argentina/ciudad-autónoma-de-buenos-aires/buenos-aires
 currency: ARS
 snapshots: [2025-09-27, 2025-12-29, 2026-03-30, 2026-06-29]
+paths:
+  processed: data/processed
+  reports: reports
 qa:
+  # Ngưỡng khởi đầu để nhóm khảo sát/điều chỉnh, không phải chuẩn thị trường.
+  price_min_ars: 1
+  price_max_ars: 5000000
+  mad_z_threshold: 3.5
+  min_nights_cap: 365
+  dedupe_keys: [id, snapshot]
+  bbox: {lat_min: -34.75, lat_max: -34.50, lon_min: -58.55, lon_max: -58.30}
+  allowed_room_types: [Entire home/apt, Private room, Shared room, Hotel room]
+  min_category_count: 5
+  numeric_cols: [price, latitude, longitude, minimum_nights, number_of_reviews, review_scores_rating, calculated_host_listings_count]
+  max_review_chars: 10000
+  auto_text_regex: '(?:the host cancel(?:ed|led) this reservation|this is an automated posting)'
 kpi:
 llm:
-seed:
+seed: 42
