@@ -1,0 +1,174 @@
+{
+  "n_reference_reviews": 100,
+  "minimum_reference_reviews": 100,
+  "label_status": "human_reviewed",
+  "reference_sentiment_counts": {
+    "positive": 82,
+    "mixed": 16,
+    "negative": 2
+  },
+  "reference_language_counts": {
+    "en": 100
+  },
+  "aspects": [
+    "vị trí",
+    "sạch sẽ",
+    "chủ nhà",
+    "giá trị",
+    "tiện nghi",
+    "độ ồn",
+    "an toàn"
+  ],
+  "coverage": {
+    "llm": {
+      "reference_reviews": 100,
+      "matched_reviews": 100,
+      "prediction_reviews": 1000,
+      "extra_predictions": 900,
+      "coverage": 1.0
+    },
+    "baseline": {
+      "reference_reviews": 100,
+      "matched_reviews": 100,
+      "prediction_reviews": 1000,
+      "extra_predictions": 900,
+      "coverage": 1.0
+    }
+  },
+  "metrics": [
+    {
+      "model": "llm",
+      "task": "sentiment",
+      "n_reviews": 100,
+      "accuracy": 0.96,
+      "precision_macro": 0.9844961240310077,
+      "recall_macro": 0.9166666666666666,
+      "f1_macro": 0.9444444444444443,
+      "precision_micro": 0.96,
+      "recall_micro": 0.96,
+      "f1_micro": 0.96,
+      "exact_match": null
+    },
+    {
+      "model": "llm",
+      "task": "language",
+      "n_reviews": 100,
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "precision_micro": 1.0,
+      "recall_micro": 1.0,
+      "f1_micro": 1.0,
+      "exact_match": null
+    },
+    {
+      "model": "llm",
+      "task": "aspects",
+      "n_reviews": 100,
+      "accuracy": null,
+      "precision_macro": 0.7070642070642071,
+      "recall_macro": 0.6573854182050903,
+      "f1_macro": 0.6790542717427405,
+      "precision_micro": 0.9781021897810219,
+      "recall_micro": 0.9178082191780822,
+      "f1_micro": 0.9469964664310954,
+      "exact_match": 0.74
+    },
+    {
+      "model": "baseline",
+      "task": "sentiment",
+      "n_reviews": 100,
+      "accuracy": 0.86,
+      "precision_macro": 0.8454106280193235,
+      "recall_macro": 0.741869918699187,
+      "f1_macro": 0.7610588645071403,
+      "precision_micro": 0.86,
+      "recall_micro": 0.86,
+      "f1_micro": 0.86,
+      "exact_match": null
+    },
+    {
+      "model": "baseline",
+      "task": "language",
+      "n_reviews": 100,
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "precision_micro": 1.0,
+      "recall_micro": 1.0,
+      "f1_micro": 1.0,
+      "exact_match": null
+    },
+    {
+      "model": "baseline",
+      "task": "aspects",
+      "n_reviews": 100,
+      "accuracy": null,
+      "precision_macro": 0.7079752953813104,
+      "recall_macro": 0.4995473413113584,
+      "f1_macro": 0.5596947119522249,
+      "precision_micro": 0.979381443298969,
+      "recall_micro": 0.6506849315068494,
+      "f1_micro": 0.7818930041152263,
+      "exact_match": 0.31
+    }
+  ],
+  "error_reviews": {
+    "llm": 27,
+    "baseline": 69
+  },
+  "method": {
+    "sentiment_macro_labels": [
+      "positive",
+      "mixed",
+      "negative"
+    ],
+    "aspect_macro_labels": [
+      "positive:vị trí",
+      "positive:sạch sẽ",
+      "positive:chủ nhà",
+      "positive:giá trị",
+      "positive:tiện nghi",
+      "positive:độ ồn",
+      "positive:an toàn",
+      "negative:vị trí",
+      "negative:sạch sẽ",
+      "negative:chủ nhà",
+      "negative:giá trị",
+      "negative:tiện nghi",
+      "negative:độ ồn",
+      "negative:an toàn"
+    ],
+    "language_macro_labels": "observed reference and prediction labels on matched reference IDs",
+    "zero_division": 0,
+    "macro_includes_zero_support_labels": true,
+    "confusion_orientation": "rows=true_label, columns=predicted_label",
+    "aspect_exact_match": "all aspect/polarity pairs must match; empty equals empty",
+    "extra_predictions": "reported but not scored",
+    "scores": "fractions in [0, 1], not percentages"
+  },
+  "inputs": [
+    {
+      "path": "D:\\Downloads\\2627-LTXLDL-Airbnb-dse2049_2_nhom_13\\data\\samples\\hand_labels.csv",
+      "sha256": "f7a72a137e1e23c35ab760a62dec3643b78881ff814440ea7387c1d958fb1a73"
+    },
+    {
+      "path": "D:\\Downloads\\2627-LTXLDL-Airbnb-dse2049_2_nhom_13\\data\\processed\\llm_results.csv",
+      "sha256": "bdea81a473e1f6439ddf7fc367426ec0da7b9413808050e0248e2a38e275474f"
+    },
+    {
+      "path": "D:\\Downloads\\2627-LTXLDL-Airbnb-dse2049_2_nhom_13\\data\\processed\\baseline_results.csv",
+      "sha256": "8dbabc92b00104cd7a45f36a4180c7e14c7834a9cf27ff7f19c0756736eac38a"
+    },
+    {
+      "path": "D:\\Downloads\\2627-LTXLDL-Airbnb-dse2049_2_nhom_13\\data\\processed\\reviews_clean.csv",
+      "sha256": "c349a3dea616b41fc63aa36a708e0d0d5444e2bed4d89e65d35d81cd84fc67c3"
+    }
+  ],
+  "warnings": [
+    "Bộ nhãn chỉ có một ngôn ngữ; không suy rộng điểm language thành năng lực đa ngôn ngữ.",
+    "Có lớp cảm xúc dưới 5 mẫu; F1 của lớp đó rất nhạy với từng nhãn."
+  ]
+}

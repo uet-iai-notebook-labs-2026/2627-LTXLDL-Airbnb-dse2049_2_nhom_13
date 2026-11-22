@@ -1,6 +1,9 @@
 city: Buenos Aires
 data_root: argentina/ciudad-autónoma-de-buenos-aires/buenos-aires
 currency: ARS
+group_code: DSE2049-C01-G06-buenos-aires
+samples_dir: data/samples
+raw_dir: data/raw
 snapshots: [2025-09-27, 2025-12-29, 2026-03-30, 2026-06-29]
 paths:
   processed: data/processed
@@ -18,6 +21,22 @@ qa:
   numeric_cols: [price, latitude, longitude, minimum_nights, number_of_reviews, review_scores_rating, calculated_host_listings_count]
   max_review_chars: 10000
   auto_text_regex: '(?:the host cancel(?:ed|led) this reservation|this is an automated posting)'
+evaluate:
+  # Bộ nhãn hiện tại đã được người thực hiện xác nhận kiểm tra tay.
+  # Với bộ nhãn mới chưa rà soát, đổi label_status về unverified.
+  label_status: human_reviewed
 kpi:
+  stakeholder: host/property_manager
+  area_col: neighbourhood_cleansed
+  price_col: price_num
+  min_nights_col: minimum_nights_num
+  entire_home_type: Entire home/apt
 llm:
+  model: gemini-3.1-flash-lite
+  # Kịch bản ước tính Standard trả phí cho văn bản, USD / 1 triệu token.
+  # Output gồm thinking; đây là ước tính toàn thành phố, không phải hóa đơn.
+  # Nguồn: https://aistudio.google.com/docs/pricing#gemini-3.1-flash-lite
+  # Đối chiếu ngày 2026-11-22; cập nhật đơn giá khi đổi model hoặc biểu giá.
+  price_per_mtok_input: 0.25
+  price_per_mtok_output: 1.50
 seed: 42

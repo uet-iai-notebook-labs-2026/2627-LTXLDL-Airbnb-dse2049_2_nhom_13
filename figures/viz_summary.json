@@ -1,0 +1,358 @@
+{
+  "charts": {
+    "01_listing_map": {
+      "files": [
+        "01_listing_map.png",
+        "01_listing_map.svg"
+      ],
+      "n_input_listings": 1000,
+      "n_observations": 1000,
+      "n_outline_rings": 53,
+      "n_valid_prices": 956,
+      "note": "Tọa độ ở mốc mới nhất; giá thiếu hiển thị xám.",
+      "scope": "all",
+      "snapshot": "2026-06-29",
+      "sources": [
+        "listings",
+        "geojson"
+      ],
+      "status": "ok"
+    },
+    "02_prices_by_area": {
+      "areas": [
+        {
+          "area": "Balvanera",
+          "n_valid": 33.0,
+          "value": 71394.0
+        },
+        {
+          "area": "Almagro",
+          "n_valid": 44.0,
+          "value": 74927.25
+        },
+        {
+          "area": "Villa Crespo",
+          "n_valid": 28.0,
+          "value": 82924.68
+        },
+        {
+          "area": "Monserrat",
+          "n_valid": 43.0,
+          "value": 84994.0
+        },
+        {
+          "area": "San Telmo",
+          "n_valid": 33.0,
+          "value": 86691.67
+        },
+        {
+          "area": "San Nicolas",
+          "n_valid": 62.0,
+          "value": 87411.0
+        },
+        {
+          "area": "Colegiales",
+          "n_valid": 23.0,
+          "value": 87540.49
+        },
+        {
+          "area": "Caballito",
+          "n_valid": 18.0,
+          "value": 92381.5
+        },
+        {
+          "area": "Belgrano",
+          "n_valid": 51.0,
+          "value": 99159.0
+        },
+        {
+          "area": "Retiro",
+          "n_valid": 39.0,
+          "value": 100291.0
+        },
+        {
+          "area": "Palermo",
+          "n_valid": 331.0,
+          "value": 110869.5
+        },
+        {
+          "area": "Recoleta",
+          "n_valid": 127.0,
+          "value": 114744.0
+        }
+      ],
+      "files": [
+        "02_prices_by_area.png",
+        "02_prices_by_area.svg"
+      ],
+      "n_observations": 832,
+      "note": "Chọn vùng theo n_valid rồi sắp theo trung vị.",
+      "scope": "area",
+      "snapshot": "2026-06-29",
+      "sources": [
+        "kpi_listings"
+      ],
+      "status": "ok"
+    },
+    "03_snapshot_trends": {
+      "calendar_denominators": [
+        365000,
+        365000,
+        360000,
+        364560
+      ],
+      "files": [
+        "03_snapshot_trends.png",
+        "03_snapshot_trends.svg"
+      ],
+      "n_observations": 4000,
+      "note": "Số listing cộng theo mốc, không phải số ID duy nhất; giá trị thiếu giữ khoảng trống.",
+      "scope": "all",
+      "snapshots": [
+        "2025-09-27",
+        "2025-12-29",
+        "2026-03-30",
+        "2026-06-29"
+      ],
+      "sources": [
+        "kpi_listings"
+      ],
+      "status": "ok"
+    },
+    "04_review_sentiment_yearly": {
+      "denominators": [
+        0,
+        1,
+        5,
+        17,
+        34,
+        47,
+        38,
+        55,
+        75,
+        82,
+        22,
+        21,
+        95,
+        151,
+        212,
+        145
+      ],
+      "files": [
+        "04_review_sentiment_yearly.png",
+        "04_review_sentiment_yearly.svg"
+      ],
+      "n_observations": 1000,
+      "note": "Gộp tử số/mẫu số tháng theo năm viết; giữ khoảng trống khi thiếu mẫu.",
+      "numerators": [
+        0,
+        1,
+        5,
+        15,
+        30,
+        46,
+        37,
+        48,
+        68,
+        74,
+        19,
+        18,
+        81,
+        132,
+        190,
+        127
+      ],
+      "review_date_max": "2025-09-24",
+      "scope": "all",
+      "sources": [
+        "kpi_reviews"
+      ],
+      "status": "ok",
+      "years": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "05_negative_aspects": {
+      "aspects": [
+        {
+          "aspect": "an toàn",
+          "denominator": 1000.0,
+          "numerator": 1.0,
+          "value": 0.001
+        },
+        {
+          "aspect": "giá trị",
+          "denominator": 1000.0,
+          "numerator": 1.0,
+          "value": 0.001
+        },
+        {
+          "aspect": "vị trí",
+          "denominator": 1000.0,
+          "numerator": 4.0,
+          "value": 0.004
+        },
+        {
+          "aspect": "chủ nhà",
+          "denominator": 1000.0,
+          "numerator": 5.0,
+          "value": 0.005
+        },
+        {
+          "aspect": "sạch sẽ",
+          "denominator": 1000.0,
+          "numerator": 20.0,
+          "value": 0.02
+        },
+        {
+          "aspect": "tiện nghi",
+          "denominator": 1000.0,
+          "numerator": 58.0,
+          "value": 0.058
+        },
+        {
+          "aspect": "độ ồn",
+          "denominator": 1000.0,
+          "numerator": 58.0,
+          "value": 0.058
+        }
+      ],
+      "files": [
+        "05_negative_aspects.png",
+        "05_negative_aspects.svg"
+      ],
+      "n_observations": 1000,
+      "note": "Các khía cạnh dùng chung mẫu số và có thể chồng lấn.",
+      "scope": "all",
+      "sources": [
+        "kpi_aspects"
+      ],
+      "status": "ok"
+    },
+    "06_model_comparison": {
+      "files": [
+        "06_model_comparison.png",
+        "06_model_comparison.svg"
+      ],
+      "label_status": "human_reviewed",
+      "models": [
+        {
+          "accuracy": 0.96,
+          "f1_macro": 0.9444444444444443,
+          "model": "llm",
+          "n_reviews": 100.0
+        },
+        {
+          "accuracy": 0.86,
+          "f1_macro": 0.7610588645071403,
+          "model": "baseline",
+          "n_reviews": 100.0
+        }
+      ],
+      "n_observations": 100,
+      "note": "Số quan sát là cỡ mẫu lớn nhất của một mô hình; các mô hình có thể cùng review.",
+      "reference_provisional": false,
+      "scope": "all",
+      "sources": [
+        "evaluation",
+        "evaluation_summary"
+      ],
+      "status": "ok"
+    }
+  },
+  "city": "Buenos Aires",
+  "currency": "ARS",
+  "inputs": {
+    "evaluation": {
+      "path": "D:\\Downloads\\2627-LTXLDL-Airbnb-dse2049_2_nhom_13\\reports\\evaluation_metrics.csv",
+      "sha256": "cb3dc6e46773852628552a0457f861d8a4c947dcab0c148cfb25945698cc331e"
+    },
+    "evaluation_summary": {
+      "path": "D:\\Downloads\\2627-LTXLDL-Airbnb-dse2049_2_nhom_13\\reports\\evaluation_summary.json",
+      "sha256": "860d22ab6a88c8240a27a2eb682040b18bb27f15051bbb0b836a5f8c2b428fa0"
+    },
+    "geojson": {
+      "path": "D:\\Downloads\\2627-LTXLDL-Airbnb-dse2049_2_nhom_13\\data\\raw\\2026-06-29\\neighbourhoods.geojson",
+      "sha256": "6f95c7ffeb32859175e9d699932a67a1af8710f1508116a13c08735f6e62f0d7"
+    },
+    "kpi_aspects": {
+      "path": "D:\\Downloads\\2627-LTXLDL-Airbnb-dse2049_2_nhom_13\\data\\processed\\kpi_aspects.csv",
+      "sha256": "f37ddc8bf62d8fdd24c21e2bc8cc1971ec67c5b5b6220bef42345e33068e6a2a"
+    },
+    "kpi_listings": {
+      "path": "D:\\Downloads\\2627-LTXLDL-Airbnb-dse2049_2_nhom_13\\data\\processed\\kpi_listings.csv",
+      "sha256": "783ac7a74a0459f3c6846b875596a66cce1435736103c4b327ae9981d465d6b1"
+    },
+    "kpi_reviews": {
+      "path": "D:\\Downloads\\2627-LTXLDL-Airbnb-dse2049_2_nhom_13\\data\\processed\\kpi_reviews.csv",
+      "sha256": "d43a39e357921ac50c572ec1eb69039cd2751bf7f422d777706459ade03f1274"
+    },
+    "kpi_summary": {
+      "path": "D:\\Downloads\\2627-LTXLDL-Airbnb-dse2049_2_nhom_13\\data\\processed\\kpi_summary.json",
+      "sha256": "f45e1d937ce1bfa307c58b8eb5a07d9bdb6ac11b7bb1a6c44c7c5db4e3f163f4"
+    },
+    "listings": {
+      "path": "D:\\Downloads\\2627-LTXLDL-Airbnb-dse2049_2_nhom_13\\data\\processed\\listings_clean.csv",
+      "sha256": "98752f957a09a018a23365e7d0d663780f05872942021aaef811d08d9167baa1"
+    }
+  },
+  "latest_snapshot": "2026-06-29",
+  "output_files": [
+    "01_listing_map.png",
+    "01_listing_map.svg",
+    "02_prices_by_area.png",
+    "02_prices_by_area.svg",
+    "03_snapshot_trends.png",
+    "03_snapshot_trends.svg",
+    "04_review_sentiment_yearly.png",
+    "04_review_sentiment_yearly.svg",
+    "05_negative_aspects.png",
+    "05_negative_aspects.svg",
+    "06_model_comparison.png",
+    "06_model_comparison.svg",
+    "viz_summary.json"
+  ],
+  "schema_version": 1,
+  "settings": {
+    "area_col": "neighbourhood_cleansed",
+    "dpi": 180,
+    "font_family": "DejaVu Sans",
+    "formats": [
+      "png",
+      "svg"
+    ],
+    "latitude_col": "latitude_num",
+    "longitude_col": "longitude_num",
+    "min_group_n": 5,
+    "min_review_n": 20,
+    "price_col": "price_num",
+    "top_n": 12
+  },
+  "skip_llm": false,
+  "snapshots": [
+    "2025-09-27",
+    "2025-12-29",
+    "2026-03-30",
+    "2026-06-29"
+  ],
+  "warnings": [
+    "Các hình chỉ mô tả mẫu được giao, không mặc nhiên đại diện toàn thành phố.",
+    "Ngày lịch không khả dụng không xác lập lượt đặt phòng, công suất hay doanh thu.",
+    "Review dùng năm viết lịch sử; mô hình và việc chọn mẫu có thể gây thiên lệch."
+  ]
+}

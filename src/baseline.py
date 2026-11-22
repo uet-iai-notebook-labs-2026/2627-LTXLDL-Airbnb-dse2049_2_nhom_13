@@ -7,13 +7,27 @@ Chỉ select_inputs của LLM được phép chọn tập đầu vào; không t�
 Đọc reviews_clean.csv; ghi baseline_results.csv với đúng llm.RESULT_COLUMNS.
 Hỗ trợ từ vựng es/en/pt/fr, bảy khía cạnh mặc định (kèm bí danh tiếng Anh).
 Đây là đối chứng giải thích được; chưa có accuracy/F1 nếu chưa có nhãn tay.
+
+Chạy từ gốc repo: python src/baseline.py
+Hoặc: python -m src.baseline --config configs/Buenos_Aires.yaml
 """
 from __future__ import annotations
 
+import argparse
+import logging
+from pathlib import Path
 import re
+import sys
 import unicodedata
 
 import pandas as pd
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+# Python chạy file trực tiếp không tự đặt package, nên relative import thất bại.
+# Bổ sung gốc repo và đặt package để vẫn dùng đúng cùng module src.llm.
+if __package__ in (None, ""):
+    sys.path.insert(0, str(REPO_ROOT))
+    __package__ = "src"
 
 from .llm import (
     ASPECT_SEPARATOR, RESULT_COLUMNS, SENTIMENTS, UNKNOWN_LANGUAGE,
@@ -111,7 +125,7 @@ STOPWORDS: dict[str, set[str]] = {
 
 
 def norm_text(text: str) -> str:
-    """Viết thường, bỏ dấu NFD; None/NaN/pd.NA trở thành chuỗi rỗng."""
+    """Trả text dạng chữ thường, bỏ dấu NFD; None/NaN/pd.NA trở thành chuỗi rỗng."""
     if text is None or text is pd.NA:
         return ""
     if not isinstance(text, str):
@@ -123,7 +137,7 @@ def norm_text(text: str) -> str:
 
 
 def tokenize(text: str) -> list[str]:
-    """Tách từ Latin; mở rộng phủ định tiếng Anh trước khi bỏ dấu nháy."""
+    """Trả danh sách từ Latin đã chuẩn hoá từ text; mở rộng phủ định tiếng Anh trước khi bỏ dấu nháy."""
     normalized = norm_text(text).replace("’", "'")
     normalized = re.sub(r"\bcannot\b", "can not", normalized)
     normalized = re.sub(r"\b([a-z]+)n't\b", r"\1 not", normalized)
@@ -131,12 +145,14 @@ def tokenize(text: str) -> list[str]:
 
 
 def split_sentences(text: str) -> list[str]:
+    """Tách text thành câu không rỗng theo dấu kết câu/xuống dòng; giá trị thiếu trả danh sách rỗng."""
     if text is None or text is pd.NA or (not isinstance(text, str) and pd.isna(text)):
         return []
     return [part.strip() for part in re.split(SENTENCE_SPLIT_REGEX, str(text)) if part.strip()]
 
 
 def _clauses(text: str) -> list[str]:
+    """Trả các mệnh đề đã chuẩn hoá từ text, tách theo câu, dấu ngăn và từ nối tương phản."""
     # Chuẩn hoá trước khi tách để 'porém' và 'porem' có cùng hành vi.
     return [part.strip() for sentence in split_sentences(text)
             for part in re.split(CLAUSE_SPLIT_REGEX, norm_text(sentence)) if part.strip()]
@@ -144,7 +160,7 @@ def _clauses(text: str) -> list[str]:
 
 def apply_negation(tokens: list[str]) -> list[tuple[str, int]]:
     """Đảo cực tính trong tối đa 3 từ kế tiếp, đặt lại ở từ nối tương phản.
-
+    Nhận danh sách tokens, trả các cặp (token, hệ số 1 hoặc -1) cùng thứ tự.
     Phủ định liên tiếp gia hạn cửa sổ (hợp với 'no ... nunca' trong ES), không
     cố giải quyết mọi cấu trúc phủ định kép. Bỏ qua 'not only/no solo/nao so'.
     """
@@ -169,6 +185,7 @@ def apply_negation(tokens: list[str]) -> list[tuple[str, int]]:
 
 
 def _sentiment_evidence(tokens: list[str]) -> list[tuple[int, int]]:
+    """Trả cặp (vị trí, cực tính ±1) từ tokens sau phủ định; chỉ tính sale/sales khi nhận diện tiếng Pháp."""
     evidence = []
     language = detect_language(tokens)
     for i, (token, factor) in enumerate(apply_negation(tokens)):
@@ -182,12 +199,16 @@ def _sentiment_evidence(tokens: list[str]) -> list[tuple[int, int]]:
 
 
 def count_sentiment_words(tokens: list[str]) -> tuple[int, int]:
+    """Trả cặp số từ mang cảm xúc dương/âm trong tokens sau áp dụng phủ định và quy tắc ngôn ngữ."""
     evidence = _sentiment_evidence(tokens)
     return sum(polarity > 0 for _, polarity in evidence), sum(polarity < 0 for _, polarity in evidence)
 
 
 def decide_sentiment(n_pos: int, n_neg: int) -> str:
-    """Hai phía đủ cân bằng -> mixed; còn lại dùng phía trội, mặc định positive."""
+    """Hai phía đủ cân bằng -> mixed; còn lại dùng phía trội, mặc định positive.
+    Nhận số từ dương/âm không âm, trả nhãn sentiment theo ngưỡng MIXED_RATIO_THRESHOLD.
+    Không có bằng chứng trả DEFAULT_SENTIMENT; số đếm âm gây ValueError.
+    """
     if n_pos < 0 or n_neg < 0:
         raise ValueError("Số từ cảm xúc phải không âm")
     if n_pos == n_neg == 0:
@@ -198,6 +219,7 @@ def decide_sentiment(n_pos: int, n_neg: int) -> str:
 
 
 def _keywords(aspect: str) -> set[str]:
+    """Trả tập từ khoá theo tên hoặc bí danh aspect; khía cạnh chưa hỗ trợ gây ValueError."""
     if aspect in ASPECT_KEYWORDS:
         return ASPECT_KEYWORDS[aspect]
     # NFD không tự chuyển đ -> d; xử lý riêng cho bí danh tiếng Việt.
@@ -208,6 +230,10 @@ def _keywords(aspect: str) -> set[str]:
 
 
 def _configured_aspects(cfg: dict) -> list[str]:
+    """Lấy danh sách khía cạnh từ cấu hình LLM trong cfg và trả nguyên tên đã cấu hình.
+    Kiểm tra danh sách không rỗng, tên hợp lệ/không trùng và không chứa dấu phân cách.
+    Báo ValueError khi cấu hình sai hoặc có khía cạnh chưa có từ điển baseline.
+    """
     aspects = get_llm_config(cfg)["aspects"]
     if not isinstance(aspects, list) or not aspects or any(not isinstance(a, str) or not a.strip() for a in aspects):
         raise ValueError("cfg['llm']['aspects'] phải là danh sách tên khía cạnh không rỗng")
@@ -222,10 +248,10 @@ def _configured_aspects(cfg: dict) -> list[str]:
 
 def extract_aspects(text: str, aspects: list[str]) -> tuple[set[str], set[str]]:
     """Gán cực tính của từ cảm xúc gần từ khoá nhất trong cùng mệnh đề.
-
-    Cùng khoảng cách có cả khen/chê thì giữ cả hai; mệnh đề không có bằng chứng
-    cảm xúc không sinh khía cạnh. Không dùng nhãn positive mặc định để suy ra khen.
-    Một khía cạnh có thể thuộc cả hai tập nếu review vừa khen vừa chê nó.
+    Nhận text và danh sách aspects; trả hai tập khía cạnh được khen và bị chê.
+    Cùng khoảng cách có cả khen/chê thì giữ cả hai; một khía cạnh có thể thuộc cả hai tập.
+    Mệnh đề không có bằng chứng cảm xúc không sinh khía cạnh;
+    không dùng nhãn positive mặc định để suy ra khen.
     """
     positive, negative = set(), set()
     dictionaries = {aspect: _keywords(aspect) for aspect in aspects}
@@ -249,7 +275,7 @@ def extract_aspects(text: str, aspects: list[str]) -> tuple[set[str], set[str]]:
 
 
 def detect_language(tokens: list[str]) -> str:
-    """Ít nhất 2 từ dừng PHÂN BIỆT; hoà điểm trả und thay vì đoán tuỳ tiện."""
+    """Từ tokens, trả mã ngôn ngữ có ít nhất 2 từ dừng khác nhau; hoà/thiếu điểm trả und."""
     vocabulary = set(tokens)
     scores = {language: len(vocabulary & STOPWORDS[language]) for language in SUPPORTED_LANGUAGES}
     best = max(scores.values(), default=0)
@@ -258,6 +284,11 @@ def detect_language(tokens: list[str]) -> str:
 
 
 def classify_review(text: str, cfg: dict) -> dict:
+    """Phân loại một review text bằng từ điển và các khía cạnh được chọn trong cfg.
+    Trả dict sentiment, language và hai chuỗi khía cạnh dương/âm đã sắp xếp.
+    Đếm cảm xúc riêng từng mệnh đề để giới hạn phạm vi phủ định;
+    cấu hình khía cạnh không hợp lệ gây ValueError.
+    """
     aspects = _configured_aspects(cfg)
     # Chấm riêng mỗi mệnh đề để 'not clean. Great host.' không đảo 'great'.
     counts = [count_sentiment_words(tokenize(clause)) for clause in _clauses(text)]
@@ -270,7 +301,10 @@ def classify_review(text: str, cfg: dict) -> dict:
 
 
 def _exact_ids(series: pd.Series, column: str) -> pd.Series:
-    """Chỉ nhận số nguyên chính xác; không phục hồi ID đã từng bị làm tròn qua float."""
+    """Chỉ nhận số nguyên chính xác; không phục hồi ID đã từng bị làm tròn qua float.
+    Nhận Series ID và tên column, trả Series int64 cùng index và mang tên column.
+    Báo ValueError kèm vị trí nếu ID thiếu, là bool/float hoặc ngoài miền int64 dương.
+    """
     values = []
     for index, value in series.items():
         if isinstance(value, bool) or pd.isna(value):
@@ -286,6 +320,7 @@ def _exact_ids(series: pd.Series, column: str) -> pd.Series:
 
 
 def _boolean_column(series: pd.Series, column: str) -> pd.Series:
+    """Trả Series bool từ các cờ chữ/số trong series, coi ô trống là False; giá trị lạ gây ValueError kèm tên column."""
     text = series.astype("string").fillna("").str.strip().str.lower()
     true = {"true", "t", "1", "1.0", "x", "yes", "y"}
     false = {"false", "f", "0", "0.0", "", "no", "n"}
@@ -296,7 +331,10 @@ def _boolean_column(series: pd.Series, column: str) -> pd.Series:
 
 
 def load_inputs(cfg: dict) -> pd.DataFrame:
-    """Đọc an toàn ID/bool, rồi dùng DUY NHẤT selector chung của llm.py."""
+    """Đọc an toàn ID/bool, rồi dùng DUY NHẤT selector chung của llm.py.
+    Nhận cfg để tìm reviews_clean.csv trong thư mục processed, trả DataFrame do select_inputs chọn.
+    Chỉ đọc tệp nguồn; báo ValueError khi thiếu cột, ID/cờ sai hoặc selector không trả DataFrame.
+    """
     source = path(cfg, "processed") / IN_REVIEWS
     reviews = pd.read_csv(source, dtype="string", keep_default_na=False)
     required = {"id", "comments_clean", "use_for_llm", "llm_sample"}
@@ -315,6 +353,10 @@ def load_inputs(cfg: dict) -> pd.DataFrame:
 
 
 def build_results_frame(cfg: dict, inputs: pd.DataFrame) -> pd.DataFrame:
+    """Tạo bảng dự đoán baseline từ cfg và inputs do llm.select_inputs trả về.
+    Trả DataFrame theo RESULT_COLUMNS, giữ review_id dạng int64 kể cả khi bảng rỗng.
+    Báo ValueError nếu cấu hình/cột đầu vào sai hoặc ID không hợp lệ, bị trùng.
+    """
     _configured_aspects(cfg)
     if not {"id", "comments_clean"}.issubset(inputs.columns):
         raise ValueError("inputs cần cột id và comments_clean từ llm.select_inputs")
@@ -331,6 +373,10 @@ def build_results_frame(cfg: dict, inputs: pd.DataFrame) -> pd.DataFrame:
 
 
 def validate_results(results: pd.DataFrame, cfg: dict) -> None:
+    """Kiểm tra bảng results theo schema kết quả và các khía cạnh trong cfg.
+    Trả None nếu cột/thứ tự, ID nguyên dương duy nhất, nhãn và chuỗi khía cạnh hợp lệ.
+    Báo ValueError khi phát hiện sai lệch; không sửa bảng đầu vào.
+    """
     aspects = set(_configured_aspects(cfg))
     if list(results.columns) != list(RESULT_COLUMNS):
         raise ValueError(f"Sai cột/thứ tự: cần {list(RESULT_COLUMNS)!r}, nhận {list(results.columns)!r}")
@@ -356,6 +402,10 @@ def validate_results(results: pd.DataFrame, cfg: dict) -> None:
 
 
 def save_results(cfg: dict, results: pd.DataFrame) -> None:
+    """Kiểm tra results theo cfg rồi ghi baseline_results.csv vào thư mục processed.
+    Tạo thư mục đích nếu cần, xuất CSV UTF-8 không kèm index và trả None.
+    Lỗi xác thực hoặc ghi tệp được truyền ra ngoài.
+    """
     validate_results(results, cfg)
     destination = path(cfg, "processed") / OUT_RESULTS
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -363,6 +413,10 @@ def save_results(cfg: dict, results: pd.DataFrame) -> None:
 
 
 def run(cfg: dict, **_) -> None:
+    """Chạy baseline với cfg: đọc mẫu chung, phân loại, kiểm tra và lưu kết quả.
+    Trả None, ghi baseline_results.csv và log số review cùng phân bố nhãn/ngôn ngữ.
+    Các tham số bổ sung được bỏ qua; lỗi cấu hình, dữ liệu hoặc I/O được truyền ra ngoài.
+    """
     inputs = load_inputs(cfg)
     results = build_results_frame(cfg, inputs)
     validate_results(results, cfg)
@@ -370,3 +424,36 @@ def run(cfg: dict, **_) -> None:
     log.info("Baseline: %d reviews; sentiment=%s; language=%s", len(results),
              results["sentiment"].value_counts().sort_index().to_dict(),
              results["language"].value_counts().sort_index().to_dict())
+    log.info("Đã ghi %s", path(cfg, "processed") / OUT_RESULTS)
+
+
+def main() -> None:
+    """Điểm vào CLI; lỗi cấu hình/dữ liệu báo rõ, không in traceback dài.
+    Đọc --config từ dòng lệnh, nạp YAML và gọi run; trả None khi hoàn tất.
+    Thiết lập UTF-8/logging và ghi kết quả qua run; lỗi đọc/YAML/cấu hình hoặc dữ liệu
+    được parser.exit báo với mã thoát 1.
+    """
+    import yaml
+
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument("--config", default="configs/Buenos_Aires.yaml", help="đường dẫn YAML, tương đối từ gốc repo")
+    args = parser.parse_args()
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
+    config_file = Path(args.config)
+    if not config_file.is_absolute():
+        config_file = REPO_ROOT / config_file
+    try:
+        with config_file.open(encoding="utf-8") as handle:
+            cfg = yaml.safe_load(handle)
+        if not isinstance(cfg, dict):
+            raise ValueError("Config YAML phải là mapping")
+        run(cfg)
+    except (OSError, ValueError, KeyError, yaml.YAMLError) as exc:
+        parser.exit(1, f"Baseline: {exc}\n")
+
+
+if __name__ == "__main__":
+    main()

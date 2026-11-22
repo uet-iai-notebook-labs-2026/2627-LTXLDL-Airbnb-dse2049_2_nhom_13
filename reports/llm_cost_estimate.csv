@@ -1,0 +1,2 @@
+snapshot,n_reviews_city,avg_tokens_in_per_review,avg_tokens_out_per_review,source,price_in_usd_per_mtok,price_out_usd_per_mtok,estimated_cost_usd,note
+2026-06-29,1182517,99.447,111.609,đo từ cache,0.25,1.5,227.36875180425,"Ước tính, không phải hoá đơn; token output gồm thinking nếu API cung cấp. Chưa gồm phí retry/lô lỗi; văn bản dài có thể bị cắt khi gọi API."

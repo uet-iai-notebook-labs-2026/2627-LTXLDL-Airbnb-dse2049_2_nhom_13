@@ -39,10 +39,12 @@ ENV_FILE = REPO_ROOT / ".env"
 
 
 def get_logger(name: str) -> logging.Logger:
+    """Trả logger theo tên để các bước xử lý dùng chung hệ thống logging."""
     return logging.getLogger(name)
 
 
 def path(cfg: dict, name: str) -> Path:
+    """Lấy đường dẫn cấu hình hoặc mặc định, quy đổi đường dẫn tương đối theo gốc repo."""
     defaults = {"processed": "data/processed", "reports": "reports", "samples": "data/samples", "raw": "data/raw"}
     value = (cfg.get("paths") or {}).get(name, cfg.get(f"{name}_dir", defaults.get(name)))
     if value is None:
@@ -52,6 +54,7 @@ def path(cfg: dict, name: str) -> Path:
 
 
 def rel(value) -> str:
+    """Chuyển giá trị đường dẫn thành chuỗi để hiển thị."""
     return str(value)
 
 log = get_logger("llm")
@@ -90,6 +93,11 @@ LANGUAGE_CODES = set("""aa ab ae af ak am an ar as av ay az ba be bg bh bi bm bn
 
 
 def get_llm_config(cfg: dict) -> dict:
+    """Ghép cấu hình LLM được cung cấp với các giá trị mặc định.
+
+    Trả dict đã kiểm tra model, kích thước lô, khía cạnh và thông số số học.
+    Báo ValueError khi cấu hình không hợp lệ; không đọc key hay gọi API.
+    """
     supplied = cfg.get("llm") or {}
     if not isinstance(supplied, dict):
         raise ValueError("cfg['llm'] phải là mapping hoặc null")
@@ -121,6 +129,7 @@ def get_llm_config(cfg: dict) -> dict:
 
 
 def normalize_item_id(raw) -> int | None:
+    """Chuẩn hoá ID nguyên hoặc chuỗi thập phân/[ID=...] thành int64 dương, sai trả None."""
     if isinstance(raw, bool):
         return None
     if isinstance(raw, Integral):
@@ -136,6 +145,7 @@ def normalize_item_id(raw) -> int | None:
 
 
 def _ids(series: pd.Series) -> pd.Series:
+    """Trả Series ID int64 giữ nguyên index, báo ValueError nếu có ID không hợp lệ."""
     values = []
     for index, raw in series.items():
         value = normalize_item_id(raw)
@@ -146,6 +156,7 @@ def _ids(series: pd.Series) -> pd.Series:
 
 
 def _booleans(series: pd.Series, name: str) -> pd.Series:
+    """Đổi các biểu diễn cờ được chấp nhận thành Series bool, báo lỗi theo tên cột nếu sai."""
     text = series.astype("string").fillna("").str.strip().str.lower()
     yes = {"true", "t", "1", "1.0", "x", "yes", "y"}
     no = {"false", "f", "0", "0.0", "", "no", "n"}
@@ -155,6 +166,7 @@ def _booleans(series: pd.Series, name: str) -> pd.Series:
 
 
 def build_response_schema(aspects: list[str]) -> dict:
+    """Tạo JSON Schema phản hồi Gemini với nhãn cảm xúc, ngôn ngữ và các khía cạnh cho phép."""
     return {"type": "array", "items": {"type": "object", "properties": {
         "id": {"type": "string", "description": "Exact review ID copied as a decimal string"},
         "sentiment": {"type": "string", "enum": SENTIMENTS},
@@ -166,6 +178,11 @@ def build_response_schema(aspects: list[str]) -> dict:
 
 
 def build_prompt(batch: list[tuple[int, str]], aspects: list[str], max_chars: int) -> str:
+    """Tạo prompt phân loại từ các cặp ID/văn bản và danh sách khía cạnh.
+
+    Kiểm tra giới hạn ký tự cùng ID sai/trùng, cắt từng review rồi mã hoá JSON.
+    Trả chuỗi hướng dẫn và dữ liệu review; không gọi mạng hay thay đổi đầu vào.
+    """
     if isinstance(max_chars, bool) or not isinstance(max_chars, Integral) or max_chars <= 0:
         raise ValueError("max_chars phải là số nguyên > 0")
     instructions = (
@@ -199,6 +216,7 @@ def _env_value(name: str) -> str:
 
     Hỗ trợ export, dấu nháy đơn/đôi và comment. Không nội suy biến hay chạy lệnh.
     Đọc lại mỗi lần nên đổi key trong .env không bị giữ bởi cache trong tiến trình.
+    Trả chuỗi rỗng khi thiếu file/biến; báo RuntimeError nếu lỗi đọc hoặc định dạng.
     """
     try:
         lines = ENV_FILE.read_text(encoding="utf-8-sig").splitlines()
@@ -238,7 +256,11 @@ def _env_value(name: str) -> str:
 
 
 def get_api_key(cfg: dict) -> str:
-    """Ưu tiên env tường minh, sau đó .env; tuyệt đối không log giá trị key."""
+    """Lấy API key theo tên biến cấu hình, ưu tiên môi trường rồi đến .env.
+
+    Khi dùng tên mặc định, thử thêm GOOGLE_API_KEY trong từng nguồn đọc.
+    Trả chuỗi key hoặc báo RuntimeError nếu thiếu; tuyệt đối không log key.
+    """
     name = get_llm_config(cfg)["api_key_env"]
     names = [name]
     if "api_key_env" not in (cfg.get("llm") or {}) and name == "GEMINI_API_KEY":
@@ -255,6 +277,7 @@ def get_api_key(cfg: dict) -> str:
 
 
 def parse_model_output(text: str) -> list[dict]:
+    """Bỏ hàng rào Markdown nếu có rồi đọc mảng JSON các dict, báo ValueError nếu sai."""
     if not isinstance(text, str):
         raise ValueError("Phản hồi mô hình phải là chuỗi JSON")
     cleaned = text.strip()
@@ -271,6 +294,12 @@ def parse_model_output(text: str) -> list[dict]:
 
 
 def call_gemini(cfg: dict, prompt: str) -> tuple[list[dict] | None, dict]:
+    """Gửi prompt qua mạng tới Gemini REST bằng model và API key cấu hình.
+
+    Trả cặp danh sách item và usageMetadata; lỗi HTTP/mạng/JSON được ghi cảnh báo.
+    Thử lại với thời gian chờ tăng dần theo cấu hình, thất bại trả (None, {}).
+    Lỗi cấu hình hoặc đọc key truyền ra ngoài; hàm không đọc hay ghi cache.
+    """
     settings = get_llm_config(cfg)
     key = get_api_key(cfg)
     payload = {"contents": [{"role": "user", "parts": [{"text": prompt}]}],
@@ -306,6 +335,11 @@ def call_gemini(cfg: dict, prompt: str) -> tuple[list[dict] | None, dict]:
 
 
 def smoke_test(cfg: dict, n: int = 3) -> None:
+    """Đọc và chọn tối đa n review để kiểm tra Gemini qua mạng trong một lô.
+
+    Kiểm tra ID, số lượng và schema phản hồi rồi in JSON item/token ra stdout.
+    Không trả dữ liệu hay ghi cache; báo lỗi nếu thiếu review hoặc phản hồi sai.
+    """
     if not isinstance(n, Integral) or isinstance(n, bool) or n < 1:
         raise ValueError("n phải >= 1")
     inputs = select_inputs(cfg, load_inputs(cfg)).head(n)
@@ -324,6 +358,7 @@ def smoke_test(cfg: dict, n: int = 3) -> None:
 
 
 def make_cache_key(review_id: int, cfg: dict) -> str:
+    """Tạo khoá cache theo ID và chữ ký model, phiên bản prompt, khía cạnh, giới hạn ký tự."""
     settings = get_llm_config(cfg)
     rid = normalize_item_id(review_id)
     if rid is None:
@@ -334,12 +369,14 @@ def make_cache_key(review_id: int, cfg: dict) -> str:
 
 
 def _token_number(raw) -> float | None:
+    """Trả số token dạng float hữu hạn không âm, hoặc None nếu giá trị không hợp lệ."""
     if isinstance(raw, bool) or not isinstance(raw, (int, float)) or not math.isfinite(raw) or raw < 0:
         return None
     return float(raw)
 
 
 def _usage_tokens(usage: dict) -> tuple[float | None, float | None]:
+    """Lấy token đầu vào/đầu ra từ usage, cộng thinking vào đầu ra và giữ None nếu sai/thiếu."""
     tin, tout = _token_number(usage.get(USAGE_KEY_IN)), _token_number(usage.get(USAGE_KEY_OUT))
     thoughts = _token_number(usage.get("thoughtsTokenCount", 0))
     # Google tính cả thinking trong output; không bỏ sót chi phí này.
@@ -347,6 +384,7 @@ def _usage_tokens(usage: dict) -> tuple[float | None, float | None]:
 
 
 def validate_item(item: dict, batch_ids: set[int], aspects: list[str]) -> bool:
+    """Kiểm tra ID, cảm xúc, ngôn ngữ và khía cạnh của item, cảnh báo và trả False nếu sai."""
     if not isinstance(item, dict):
         log.warning("Bỏ item không phải object")
         return False
@@ -369,6 +407,11 @@ def validate_item(item: dict, batch_ids: set[int], aspects: list[str]) -> bool:
 
 
 def load_cache(cache_path) -> dict[str, dict]:
+    """Đọc cache JSONL tại đường dẫn được cung cấp thành dict theo khoá cache.
+
+    Trả dict rỗng nếu chưa có file; bản ghi sau cùng thay bản ghi trùng khoá.
+    Bỏ và cảnh báo các dòng hỏng, không sửa hay ghi lại file cache.
+    """
     cache = {}
     source = Path(cache_path)
     if not source.exists():
@@ -398,6 +441,11 @@ def load_cache(cache_path) -> dict[str, dict]:
 
 
 def make_cache_record(review_id: int, item: dict, usage: dict, batch_size: int, cfg: dict) -> dict:
+    """Tạo bản ghi cache từ ID, item hợp lệ và token của lô phản hồi.
+
+    Chia token đều cho batch_size, chuẩn hoá ID trong kết quả thành chuỗi.
+    Trả dict chứa khoá/kết quả/token; báo lỗi đầu vào sai và không ghi file.
+    """
     if not isinstance(batch_size, Integral) or isinstance(batch_size, bool) or batch_size < 1:
         raise ValueError("batch_size phải >= 1")
     rid = normalize_item_id(review_id)
@@ -411,6 +459,7 @@ def make_cache_record(review_id: int, item: dict, usage: dict, batch_size: int, 
 
 
 def append_to_cache(fh, record: dict) -> None:
+    """Ghi một bản ghi JSONL vào stream, flush ngay và thử fsync nếu stream hỗ trợ."""
     fh.write(json.dumps(record, ensure_ascii=False, allow_nan=False) + "\n")
     fh.flush()
     # flush ghi ngay xuống stream; fsync thêm cho file thật nếu có.
@@ -421,6 +470,11 @@ def append_to_cache(fh, record: dict) -> None:
 
 
 def load_inputs(cfg: dict) -> pd.DataFrame:
+    """Đọc reviews_clean.csv từ thư mục processed trong cấu hình.
+
+    Kiểm tra các cột bắt buộc, chuẩn hoá ID int64 và ba cờ chọn review thành bool.
+    Trả DataFrame review; báo lỗi nếu thiếu cột hoặc dữ liệu ID/cờ không hợp lệ.
+    """
     source = path(cfg, "processed") / IN_REVIEWS
     reviews = pd.read_csv(source, dtype="string", keep_default_na=False)
     required = {"id", "comments_clean", "use_for_llm", "llm_sample", "hand_label"}
@@ -433,6 +487,12 @@ def load_inputs(cfg: dict) -> pd.DataFrame:
 
 
 def select_inputs(cfg: dict, reviews: pd.DataFrame) -> pd.DataFrame:
+    """Chọn mẫu review LLM từ cấu hình và DataFrame đầu vào đã có các cờ.
+
+    Gộp cờ mẫu/nhãn tay theo ID rồi giữ các ID đủ điều kiện, không trùng.
+    Ưu tiên llm_sample; nếu không có, cảnh báo và lấy mẫu xác định theo seed.
+    Trả bản sao mẫu sắp theo ID với index mới, không sửa DataFrame ban đầu.
+    """
     settings = get_llm_config(cfg)
     if not {"id", "comments_clean", "use_for_llm"}.issubset(reviews.columns):
         raise ValueError("reviews cần id, comments_clean, use_for_llm")
@@ -461,6 +521,7 @@ def select_inputs(cfg: dict, reviews: pd.DataFrame) -> pd.DataFrame:
 
 
 def check_hand_labels_covered(inputs: pd.DataFrame, reviews: pd.DataFrame) -> None:
+    """Cảnh báo số ID có nhãn tay trong reviews nhưng không nằm trong mẫu inputs."""
     if "hand_label" not in reviews:
         return
     mask = _booleans(reviews["hand_label"], "hand_label")
@@ -471,11 +532,17 @@ def check_hand_labels_covered(inputs: pd.DataFrame, reviews: pd.DataFrame) -> No
 
 
 def _text_hash(text) -> str:
+    """Băm SHA-256 văn bản UTF-8, coi None và pd.NA là chuỗi rỗng để so khớp cache."""
     value = "" if text is None or text is pd.NA else str(text)
     return hashlib.sha256(value.encode("utf-8")).hexdigest()
 
 
 def _cached_item(record, rid: int, cfg: dict, text=None) -> dict | None:
+    """Lấy item cache khớp ID, cấu hình và hash văn bản nếu hai bên có dữ liệu kiểm tra.
+
+    Bổ sung ngôn ngữ und cho cache cũ thiếu ngôn ngữ rồi kiểm tra schema item.
+    Trả item dùng được hoặc None; không sửa bản ghi, có thể cảnh báo khi item sai.
+    """
     if not isinstance(record, dict) or record.get("key") != make_cache_key(rid, cfg):
         return None
     if normalize_item_id(record.get("review_id")) != rid:
@@ -491,6 +558,7 @@ def _cached_item(record, rid: int, cfg: dict, text=None) -> dict | None:
 
 
 def find_pending(inputs: pd.DataFrame, cache: dict, cfg: dict) -> list[tuple[int, str]]:
+    """Trả các cặp ID/văn bản chưa có cache dùng được, báo ValueError nếu ID đầu vào sai."""
     pending = []
     for raw_id, text in zip(inputs["id"], inputs["comments_clean"]):
         rid = normalize_item_id(raw_id)
@@ -502,12 +570,19 @@ def find_pending(inputs: pd.DataFrame, cache: dict, cfg: dict) -> list[tuple[int
 
 
 def split_into_batches(items: list, batch_size: int) -> list[list]:
+    """Chia danh sách thành các lô giữ thứ tự, báo ValueError nếu kích thước lô không dương."""
     if isinstance(batch_size, bool) or not isinstance(batch_size, Integral) or batch_size <= 0:
         raise ValueError("batch_size phải là số nguyên > 0")
     return [items[i:i + batch_size] for i in range(0, len(items), batch_size)]
 
 
 def process_batches(cfg: dict, pending: list[tuple[int, str]], cache: dict, cache_path) -> dict:
+    """Gọi Gemini qua mạng theo lô cho pending và trả thống kê kết quả/token.
+
+    Kiểm tra key trước khi tạo file; ghi nối item hợp lệ vào cache_path và dict cache.
+    Lỗi API được đếm/cảnh báo, giữ cache cũ; item sai hoặc còn thiếu không được điền nhãn.
+    Có thể chờ giữa các lô; pending rỗng trả thống kê ngay, không đọc key hay ghi file.
+    """
     settings = get_llm_config(cfg)
     stats = {"n_pending": len(pending), "n_ok": 0, "n_failed_batches": 0, "n_invalid_items": 0,
              "tokens_in": 0.0, "tokens_out": 0.0}
@@ -557,12 +632,18 @@ def process_batches(cfg: dict, pending: list[tuple[int, str]], cache: dict, cach
 
 
 def flatten_aspects(aspects: list[dict]) -> tuple[str, str]:
+    """Gộp khía cạnh dương/âm thành hai chuỗi phân cách bằng '|', bỏ trùng và sắp tên."""
     positive = {a["aspect"] for a in aspects if a["polarity"] == "positive"}
     negative = {a["aspect"] for a in aspects if a["polarity"] == "negative"}
     return ASPECT_SEPARATOR.join(sorted(positive)), ASPECT_SEPARATOR.join(sorted(negative))
 
 
 def build_results_frame(cfg: dict, inputs: pd.DataFrame, cache: dict) -> pd.DataFrame:
+    """Ghép các item cache dùng được với mẫu inputs thành bảng kết quả LLM.
+
+    Kiểm tra ID sai/trùng, bỏ review thiếu cache và tách khía cạnh dương/âm.
+    Trả DataFrame đúng RESULT_COLUMNS với review_id int64; không ghi file hay gọi API.
+    """
     rows = []
     seen = set()
     for raw_id, text in zip(inputs["id"], inputs["comments_clean"]):
@@ -582,6 +663,11 @@ def build_results_frame(cfg: dict, inputs: pd.DataFrame, cache: dict) -> pd.Data
 
 
 def save_results(cfg: dict, results: pd.DataFrame) -> None:
+    """Ghi bảng kết quả đúng schema vào llm_results.csv trong thư mục processed.
+
+    Kiểm tra thứ tự cột và kiểu ID, tạo thư mục đích rồi ghi CSV UTF-8 qua file tạm.
+    Thay file đích khi ghi xong và dọn file tạm; không trả dữ liệu.
+    """
     if list(results.columns) != RESULT_COLUMNS or not pd.api.types.is_integer_dtype(results["review_id"]):
         raise ValueError("Kết quả LLM phải đúng RESULT_COLUMNS và review_id dạng số nguyên")
     destination = path(cfg, "processed") / OUT_RESULTS
@@ -596,6 +682,11 @@ def save_results(cfg: dict, results: pd.DataFrame) -> None:
 
 
 def load_city_stats(cfg: dict) -> dict:
+    """Đọc city_review_stats.json trong thư mục processed thành dict.
+
+    Trả dict dữ liệu khi JSON đúng kiểu object, phục vụ ước tính toàn thành phố.
+    Cảnh báo và trả {} nếu thiếu file hoặc JSON/kiểu dữ liệu không hợp lệ.
+    """
     source = path(cfg, "processed") / IN_CITY_STATS
     try:
         data = json.loads(source.read_text(encoding="utf-8"))
@@ -608,6 +699,7 @@ def load_city_stats(cfg: dict) -> dict:
 
 
 def average_tokens_per_review(cache: dict) -> tuple[float, float] | None:
+    """Tính token vào/ra trung bình từ bản ghi đủ hai số token hợp lệ, không có thì trả None."""
     measured = [(_token_number(record.get("tok_in")), _token_number(record.get("tok_out")))
                 for record in cache.values() if isinstance(record, dict)]
     measured = [(tin, tout) for tin, tout in measured if tin is not None and tout is not None]
@@ -617,6 +709,12 @@ def average_tokens_per_review(cache: dict) -> tuple[float, float] | None:
 
 
 def estimate_cost(cfg: dict, cache: dict) -> pd.DataFrame:
+    """Ước tính token và chi phí toàn thành phố từ cấu hình, cache và file thống kê.
+
+    Dùng snapshot lớn nhất theo chuỗi, ưu tiên token cache đúng cấu hình rồi số ký tự.
+    Trả bảng chi phí hoặc bảng rỗng nếu thiếu/sai thống kê; thiếu đơn giá để chi phí trống.
+    Có thể ghi cảnh báo; không gọi API và không ghi báo cáo ra file.
+    """
     settings = get_llm_config(cfg)
     city = load_city_stats(cfg)
     if not city:
@@ -658,6 +756,7 @@ def estimate_cost(cfg: dict, cache: dict) -> pd.DataFrame:
 
 
 def save_cost_report(cfg: dict, cost: pd.DataFrame) -> None:
+    """Tạo thư mục reports và ghi CSV chi phí UTF-8, bỏ qua nếu bảng cost rỗng."""
     if cost.empty:
         return
     destination = path(cfg, "reports") / OUT_COST
@@ -666,6 +765,7 @@ def save_cost_report(cfg: dict, cost: pd.DataFrame) -> None:
 
 
 def _cache_path(cfg: dict) -> Path:
+    """Xác định đường dẫn cache từ cấu hình theo gốc repo, mặc định trong thư mục processed."""
     configured = (cfg.get("llm") or {}).get("cache")
     if configured is None:
         return path(cfg, "processed") / "llm_cache.jsonl"
@@ -674,6 +774,12 @@ def _cache_path(cfg: dict) -> Path:
 
 
 def run(cfg: dict, skip_llm: bool = False, force: bool = False, **_) -> None:
+    """Chạy bước LLM: đọc review/cache, chọn mẫu rồi ghi kết quả và báo cáo chi phí.
+
+    skip_llm=True chỉ dùng cache, không đọc key hay gọi API; force chỉ gọi lại khi không skip.
+    Nếu cần, gọi mạng cho review thiếu cache; lỗi đọc key được log và vẫn xuất cache dùng được.
+    Cảnh báo review bị bỏ qua, ghi CSV và log số kết quả; không trả dữ liệu.
+    """
     get_llm_config(cfg)
     reviews = load_inputs(cfg)
     inputs = select_inputs(cfg, reviews)
@@ -699,6 +805,11 @@ def run(cfg: dict, skip_llm: bool = False, force: bool = False, **_) -> None:
 
 
 def main() -> None:
+    """Đọc tham số CLI và cấu hình YAML để chạy pipeline hoặc smoke test Gemini.
+
+    Thiết lập UTF-8/logging; cờ smoke-test gọi mạng, skip-llm áp dụng cho nhánh run.
+    Không trả dữ liệu; kết thúc CLI với mã lỗi 1 khi gặp các lỗi đầu vào/xử lý được bắt.
+    """
     import yaml
 
     for stream in (sys.stdout, sys.stderr):
