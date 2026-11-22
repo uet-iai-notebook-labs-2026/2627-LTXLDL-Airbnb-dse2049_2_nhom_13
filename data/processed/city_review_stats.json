@@ -1,0 +1,18 @@
+{
+  "2025-09-27": {
+    "n_reviews_city": 958381,
+    "total_chars_city": 195858550
+  },
+  "2025-12-29": {
+    "n_reviews_city": 1026047,
+    "total_chars_city": 207773779
+  },
+  "2026-03-30": {
+    "n_reviews_city": 1109541,
+    "total_chars_city": 224079086
+  },
+  "2026-06-29": {
+    "n_reviews_city": 1182517,
+    "total_chars_city": 237313172
+  }
+}

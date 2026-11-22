@@ -1,0 +1,160 @@
+{
+  "city": "Buenos Aires",
+  "counts": {
+    "calendar_listing_rows": 4000,
+    "canonical_listing_rows": 4000,
+    "n_computed_kpi_concepts": 7,
+    "n_kpi_concepts": 7,
+    "n_price_valid_but_unusable": 0,
+    "unique_listing_ids": 1000
+  },
+  "coverage": {
+    "calendar_by_snapshot": {
+      "2025-09-27": {
+        "coverage": 1.0,
+        "n_listings": 1000,
+        "n_valid": 1000,
+        "status": "ok"
+      },
+      "2025-12-29": {
+        "coverage": 1.0,
+        "n_listings": 1000,
+        "n_valid": 1000,
+        "status": "ok"
+      },
+      "2026-03-30": {
+        "coverage": 1.0,
+        "n_listings": 1000,
+        "n_valid": 1000,
+        "status": "ok"
+      },
+      "2026-06-29": {
+        "coverage": 1.0,
+        "n_listings": 1000,
+        "n_valid": 1000,
+        "status": "ok"
+      }
+    },
+    "price_by_snapshot": {
+      "2025-09-27": {
+        "coverage": 0.0,
+        "n_listings": 1000,
+        "n_valid": 0,
+        "status": "not_validated_for_snapshot"
+      },
+      "2025-12-29": {
+        "coverage": 0.0,
+        "n_listings": 1000,
+        "n_valid": 0,
+        "status": "not_validated_for_snapshot"
+      },
+      "2026-03-30": {
+        "coverage": 0.0,
+        "n_listings": 1000,
+        "n_valid": 0,
+        "status": "not_validated_for_snapshot"
+      },
+      "2026-06-29": {
+        "coverage": 0.956,
+        "n_listings": 1000,
+        "n_valid": 956,
+        "status": "partial_coverage"
+      }
+    },
+    "reviews": {
+      "classified_date_max": "2025-09-24",
+      "classified_date_min": "2011-06-21",
+      "coverage": 0.2,
+      "eligible_date_max": "2025-09-24",
+      "eligible_date_min": "2010-12-04",
+      "n_classified_listings": 349,
+      "n_classified_reviews": 1000,
+      "n_eligible_listings": 616,
+      "n_eligible_reviews": 5000,
+      "n_flagged_sample_eligible": 1000,
+      "skipped": false
+    }
+  },
+  "currency": "ARS",
+  "inputs": {
+    "calendar": {
+      "path": "D:\\Downloads\\2627-LTXLDL-Airbnb-dse2049_2_nhom_13\\data\\processed\\calendar_listing_agg.csv",
+      "sha256": "9d2e0097759e73d69e0b3b8b42657dedc96212da0c70703237b7bc9fe3dd4821"
+    },
+    "listings": {
+      "path": "D:\\Downloads\\2627-LTXLDL-Airbnb-dse2049_2_nhom_13\\data\\processed\\listings_clean.csv",
+      "sha256": "98752f957a09a018a23365e7d0d663780f05872942021aaef811d08d9167baa1"
+    },
+    "llm": {
+      "path": "D:\\Downloads\\2627-LTXLDL-Airbnb-dse2049_2_nhom_13\\data\\processed\\llm_results.csv",
+      "sha256": "bdea81a473e1f6439ddf7fc367426ec0da7b9413808050e0248e2a38e275474f"
+    },
+    "reviews": {
+      "path": "D:\\Downloads\\2627-LTXLDL-Airbnb-dse2049_2_nhom_13\\data\\processed\\reviews_clean.csv",
+      "sha256": "c349a3dea616b41fc63aa36a708e0d0d5444e2bed4d89e65d35d81cd84fc67c3"
+    }
+  },
+  "output_checksums": {
+    "kpi_aspects.csv": "f37ddc8bf62d8fdd24c21e2bc8cc1971ec67c5b5b6220bef42345e33068e6a2a",
+    "kpi_definitions.csv": "e518e1f1573aab9378c2b24f8baeae1d22948a507e8ab3b0af32c7c269e4e91d",
+    "kpi_listings.csv": "783ac7a74a0459f3c6846b875596a66cce1435736103c4b327ae9981d465d6b1",
+    "kpi_reviews.csv": "d43a39e357921ac50c572ec1eb69039cd2751bf7f422d777706459ade03f1274"
+  },
+  "output_files": [
+    "kpi_listings.csv",
+    "kpi_reviews.csv",
+    "kpi_aspects.csv",
+    "kpi_definitions.csv",
+    "kpi_summary.json"
+  ],
+  "policies": {
+    "area_col": "neighbourhood_cleansed",
+    "aspects": [
+      "vị trí",
+      "sạch sẽ",
+      "chủ nhà",
+      "giá trị",
+      "tiện nghi",
+      "độ ồn",
+      "an toàn"
+    ],
+    "calendar_denominator": "sum of observed valid listing-days, separately by snapshot",
+    "classification_completeness": "all flagged eligible sample IDs required; otherwise any eligible subset is accepted",
+    "entire_home_type": "Entire home/apt",
+    "median_denominator": "number of valid observations; numerator is blank",
+    "min_nights_col": "minimum_nights_num",
+    "minimum_night_extremes": "retained",
+    "output_checksums": "four CSV files only; summary excludes its own checksum",
+    "price_col": "price_num",
+    "price_eligibility": "price_valid AND finite positive configured price_col; no inferred historical validation",
+    "ratio_scale": "0..1",
+    "review_area": "canonical eligible review snapshot joined to the same listing snapshot",
+    "review_coverage": "classified canonical eligible review IDs / all canonical eligible review IDs",
+    "review_n_listings": "distinct listing IDs among canonical eligible reviews in each group",
+    "review_time": "review writing month; all historical dates retained",
+    "room_types": [
+      "Entire home/apt",
+      "Private room",
+      "Shared room",
+      "Hotel room"
+    ],
+    "zero_denominator": "null value with explicit status; never fabricated zero"
+  },
+  "schema_version": 1,
+  "snapshots": [
+    "2025-09-27",
+    "2025-12-29",
+    "2026-03-30",
+    "2026-06-29"
+  ],
+  "stakeholder": "host/property_manager",
+  "warnings": [
+    "All KPIs describe assigned samples, without an assumption of citywide representativeness.",
+    "Calendar unavailability includes owner blocks and does not establish occupancy, bookings, or revenue.",
+    "Snapshot calendar windows differ and can overlap; retain snapshot as a dimension when comparing them.",
+    "Price coverage is incomplete; price_valid is the sole QA eligibility mask and missing validated prices are not zero.",
+    "Review periods use historical writing dates, not snapshot dates or contemporary sentiment trends.",
+    "LLM shares describe classified reviews only; sample assignment, historical coverage, and model errors can bias them.",
+    "Unclassified eligible reviews remain unknown; consult each group's classification coverage."
+  ]
+}

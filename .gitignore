@@ -1,6 +1,6 @@
+gitignore
 .venv/
-data/raw
-data/processed/
+data/raw/
 __pycache__/
 *.py[cod]
 .env

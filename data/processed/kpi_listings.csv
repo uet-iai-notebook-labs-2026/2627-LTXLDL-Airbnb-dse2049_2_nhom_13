@@ -1,0 +1,721 @@
+snapshot,scope,area_col,area,kpi,value,unit,numerator,denominator,n_listings,n_valid,status
+2025-09-27,all,neighbourhood_cleansed,,listing_count,1000.0,listings,1000.0,,1000,1000,ok
+2025-09-27,all,neighbourhood_cleansed,,median_valid_price,,ARS,,0.0,1000,0,not_validated_for_snapshot
+2025-09-27,all,neighbourhood_cleansed,,entire_home_share,0.875,share,875.0,1000.0,1000,1000,ok
+2025-09-27,all,neighbourhood_cleansed,,median_min_nights,2.0,nights,,1000.0,1000,1000,ok
+2025-09-27,all,neighbourhood_cleansed,,pooled_unavailable_day_rate,0.34221917808219177,share,124910.0,365000.0,1000,1000,ok
+2025-09-27,area,neighbourhood_cleansed,Agronomia,listing_count,4.0,listings,4.0,,4,4,ok
+2025-09-27,area,neighbourhood_cleansed,Agronomia,median_valid_price,,ARS,,0.0,4,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Agronomia,entire_home_share,1.0,share,4.0,4.0,4,4,ok
+2025-09-27,area,neighbourhood_cleansed,Agronomia,median_min_nights,2.0,nights,,4.0,4,4,ok
+2025-09-27,area,neighbourhood_cleansed,Agronomia,pooled_unavailable_day_rate,0.2636986301369863,share,385.0,1460.0,4,4,ok
+2025-09-27,area,neighbourhood_cleansed,Almagro,listing_count,45.0,listings,45.0,,45,45,ok
+2025-09-27,area,neighbourhood_cleansed,Almagro,median_valid_price,,ARS,,0.0,45,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Almagro,entire_home_share,0.6888888888888889,share,31.0,45.0,45,45,ok
+2025-09-27,area,neighbourhood_cleansed,Almagro,median_min_nights,2.0,nights,,45.0,45,45,ok
+2025-09-27,area,neighbourhood_cleansed,Almagro,pooled_unavailable_day_rate,0.2745814307458143,share,4510.0,16425.0,45,45,ok
+2025-09-27,area,neighbourhood_cleansed,Balvanera,listing_count,34.0,listings,34.0,,34,34,ok
+2025-09-27,area,neighbourhood_cleansed,Balvanera,median_valid_price,,ARS,,0.0,34,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Balvanera,entire_home_share,0.7647058823529411,share,26.0,34.0,34,34,ok
+2025-09-27,area,neighbourhood_cleansed,Balvanera,median_min_nights,2.0,nights,,34.0,34,34,ok
+2025-09-27,area,neighbourhood_cleansed,Balvanera,pooled_unavailable_day_rate,0.37236099919419824,share,4621.0,12410.0,34,34,ok
+2025-09-27,area,neighbourhood_cleansed,Barracas,listing_count,7.0,listings,7.0,,7,7,ok
+2025-09-27,area,neighbourhood_cleansed,Barracas,median_valid_price,,ARS,,0.0,7,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Barracas,entire_home_share,1.0,share,7.0,7.0,7,7,ok
+2025-09-27,area,neighbourhood_cleansed,Barracas,median_min_nights,3.0,nights,,7.0,7,7,ok
+2025-09-27,area,neighbourhood_cleansed,Barracas,pooled_unavailable_day_rate,0.15459882583170254,share,395.0,2555.0,7,7,ok
+2025-09-27,area,neighbourhood_cleansed,Belgrano,listing_count,52.0,listings,52.0,,52,52,ok
+2025-09-27,area,neighbourhood_cleansed,Belgrano,median_valid_price,,ARS,,0.0,52,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Belgrano,entire_home_share,0.8846153846153846,share,46.0,52.0,52,52,ok
+2025-09-27,area,neighbourhood_cleansed,Belgrano,median_min_nights,2.0,nights,,52.0,52,52,ok
+2025-09-27,area,neighbourhood_cleansed,Belgrano,pooled_unavailable_day_rate,0.3934668071654373,share,7468.0,18980.0,52,52,ok
+2025-09-27,area,neighbourhood_cleansed,Boca,listing_count,6.0,listings,6.0,,6,6,ok
+2025-09-27,area,neighbourhood_cleansed,Boca,median_valid_price,,ARS,,0.0,6,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Boca,entire_home_share,1.0,share,6.0,6.0,6,6,ok
+2025-09-27,area,neighbourhood_cleansed,Boca,median_min_nights,2.0,nights,,6.0,6,6,ok
+2025-09-27,area,neighbourhood_cleansed,Boca,pooled_unavailable_day_rate,0.46529680365296805,share,1019.0,2190.0,6,6,ok
+2025-09-27,area,neighbourhood_cleansed,Boedo,listing_count,4.0,listings,4.0,,4,4,ok
+2025-09-27,area,neighbourhood_cleansed,Boedo,median_valid_price,,ARS,,0.0,4,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Boedo,entire_home_share,0.5,share,2.0,4.0,4,4,ok
+2025-09-27,area,neighbourhood_cleansed,Boedo,median_min_nights,17.0,nights,,4.0,4,4,ok
+2025-09-27,area,neighbourhood_cleansed,Boedo,pooled_unavailable_day_rate,0.0958904109589041,share,140.0,1460.0,4,4,ok
+2025-09-27,area,neighbourhood_cleansed,Caballito,listing_count,20.0,listings,20.0,,20,20,ok
+2025-09-27,area,neighbourhood_cleansed,Caballito,median_valid_price,,ARS,,0.0,20,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Caballito,entire_home_share,0.85,share,17.0,20.0,20,20,ok
+2025-09-27,area,neighbourhood_cleansed,Caballito,median_min_nights,2.0,nights,,20.0,20,20,ok
+2025-09-27,area,neighbourhood_cleansed,Caballito,pooled_unavailable_day_rate,0.413013698630137,share,3015.0,7300.0,20,20,ok
+2025-09-27,area,neighbourhood_cleansed,Chacarita,listing_count,18.0,listings,18.0,,18,18,ok
+2025-09-27,area,neighbourhood_cleansed,Chacarita,median_valid_price,,ARS,,0.0,18,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Chacarita,entire_home_share,0.7222222222222222,share,13.0,18.0,18,18,ok
+2025-09-27,area,neighbourhood_cleansed,Chacarita,median_min_nights,3.0,nights,,18.0,18,18,ok
+2025-09-27,area,neighbourhood_cleansed,Chacarita,pooled_unavailable_day_rate,0.3324200913242009,share,2184.0,6570.0,18,18,ok
+2025-09-27,area,neighbourhood_cleansed,Coghlan,listing_count,3.0,listings,3.0,,3,3,ok
+2025-09-27,area,neighbourhood_cleansed,Coghlan,median_valid_price,,ARS,,0.0,3,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Coghlan,entire_home_share,1.0,share,3.0,3.0,3,3,ok
+2025-09-27,area,neighbourhood_cleansed,Coghlan,median_min_nights,1.0,nights,,3.0,3,3,ok
+2025-09-27,area,neighbourhood_cleansed,Coghlan,pooled_unavailable_day_rate,0.17899543378995433,share,196.0,1095.0,3,3,ok
+2025-09-27,area,neighbourhood_cleansed,Colegiales,listing_count,23.0,listings,23.0,,23,23,ok
+2025-09-27,area,neighbourhood_cleansed,Colegiales,median_valid_price,,ARS,,0.0,23,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Colegiales,entire_home_share,0.9130434782608695,share,21.0,23.0,23,23,ok
+2025-09-27,area,neighbourhood_cleansed,Colegiales,median_min_nights,2.0,nights,,23.0,23,23,ok
+2025-09-27,area,neighbourhood_cleansed,Colegiales,pooled_unavailable_day_rate,0.3543776057176891,share,2975.0,8395.0,23,23,ok
+2025-09-27,area,neighbourhood_cleansed,Constitucion,listing_count,13.0,listings,13.0,,13,13,ok
+2025-09-27,area,neighbourhood_cleansed,Constitucion,median_valid_price,,ARS,,0.0,13,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Constitucion,entire_home_share,0.7692307692307693,share,10.0,13.0,13,13,ok
+2025-09-27,area,neighbourhood_cleansed,Constitucion,median_min_nights,2.0,nights,,13.0,13,13,ok
+2025-09-27,area,neighbourhood_cleansed,Constitucion,pooled_unavailable_day_rate,0.3713382507903056,share,1762.0,4745.0,13,13,ok
+2025-09-27,area,neighbourhood_cleansed,Flores,listing_count,5.0,listings,5.0,,5,5,ok
+2025-09-27,area,neighbourhood_cleansed,Flores,median_valid_price,,ARS,,0.0,5,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Flores,entire_home_share,1.0,share,5.0,5.0,5,5,ok
+2025-09-27,area,neighbourhood_cleansed,Flores,median_min_nights,3.0,nights,,5.0,5,5,ok
+2025-09-27,area,neighbourhood_cleansed,Flores,pooled_unavailable_day_rate,0.6158904109589041,share,1124.0,1825.0,5,5,ok
+2025-09-27,area,neighbourhood_cleansed,Floresta,listing_count,2.0,listings,2.0,,2,2,ok
+2025-09-27,area,neighbourhood_cleansed,Floresta,median_valid_price,,ARS,,0.0,2,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Floresta,entire_home_share,0.0,share,0.0,2.0,2,2,ok
+2025-09-27,area,neighbourhood_cleansed,Floresta,median_min_nights,1.0,nights,,2.0,2,2,ok
+2025-09-27,area,neighbourhood_cleansed,Floresta,pooled_unavailable_day_rate,0.0,share,0.0,730.0,2,2,ok
+2025-09-27,area,neighbourhood_cleansed,Liniers,listing_count,1.0,listings,1.0,,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Liniers,median_valid_price,,ARS,,0.0,1,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Liniers,entire_home_share,1.0,share,1.0,1.0,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Liniers,median_min_nights,1.0,nights,,1.0,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Liniers,pooled_unavailable_day_rate,0.04657534246575343,share,17.0,365.0,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Monserrat,listing_count,44.0,listings,44.0,,44,44,ok
+2025-09-27,area,neighbourhood_cleansed,Monserrat,median_valid_price,,ARS,,0.0,44,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Monserrat,entire_home_share,0.7045454545454546,share,31.0,44.0,44,44,ok
+2025-09-27,area,neighbourhood_cleansed,Monserrat,median_min_nights,2.0,nights,,44.0,44,44,ok
+2025-09-27,area,neighbourhood_cleansed,Monserrat,pooled_unavailable_day_rate,0.300560398505604,share,4827.0,16060.0,44,44,ok
+2025-09-27,area,neighbourhood_cleansed,Nuñez,listing_count,13.0,listings,13.0,,13,13,ok
+2025-09-27,area,neighbourhood_cleansed,Nuñez,median_valid_price,,ARS,,0.0,13,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Nuñez,entire_home_share,0.7692307692307693,share,10.0,13.0,13,13,ok
+2025-09-27,area,neighbourhood_cleansed,Nuñez,median_min_nights,2.0,nights,,13.0,13,13,ok
+2025-09-27,area,neighbourhood_cleansed,Nuñez,pooled_unavailable_day_rate,0.440463645943098,share,2090.0,4745.0,13,13,ok
+2025-09-27,area,neighbourhood_cleansed,Palermo,listing_count,352.0,listings,352.0,,352,352,ok
+2025-09-27,area,neighbourhood_cleansed,Palermo,median_valid_price,,ARS,,0.0,352,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Palermo,entire_home_share,0.9318181818181818,share,328.0,352.0,352,352,ok
+2025-09-27,area,neighbourhood_cleansed,Palermo,median_min_nights,2.0,nights,,352.0,352,352,ok
+2025-09-27,area,neighbourhood_cleansed,Palermo,pooled_unavailable_day_rate,0.3616671855541719,share,46467.0,128480.0,352,352,ok
+2025-09-27,area,neighbourhood_cleansed,Parque Avellaneda,listing_count,1.0,listings,1.0,,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Parque Avellaneda,median_valid_price,,ARS,,0.0,1,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Parque Avellaneda,entire_home_share,1.0,share,1.0,1.0,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Parque Avellaneda,median_min_nights,15.0,nights,,1.0,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Parque Avellaneda,pooled_unavailable_day_rate,0.010958904109589041,share,4.0,365.0,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Parque Chacabuco,listing_count,2.0,listings,2.0,,2,2,ok
+2025-09-27,area,neighbourhood_cleansed,Parque Chacabuco,median_valid_price,,ARS,,0.0,2,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Parque Chacabuco,entire_home_share,1.0,share,2.0,2.0,2,2,ok
+2025-09-27,area,neighbourhood_cleansed,Parque Chacabuco,median_min_nights,1.5,nights,,2.0,2,2,ok
+2025-09-27,area,neighbourhood_cleansed,Parque Chacabuco,pooled_unavailable_day_rate,0.2,share,146.0,730.0,2,2,ok
+2025-09-27,area,neighbourhood_cleansed,Parque Chas,listing_count,3.0,listings,3.0,,3,3,ok
+2025-09-27,area,neighbourhood_cleansed,Parque Chas,median_valid_price,,ARS,,0.0,3,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Parque Chas,entire_home_share,0.6666666666666666,share,2.0,3.0,3,3,ok
+2025-09-27,area,neighbourhood_cleansed,Parque Chas,median_min_nights,2.0,nights,,3.0,3,3,ok
+2025-09-27,area,neighbourhood_cleansed,Parque Chas,pooled_unavailable_day_rate,0.3552511415525114,share,389.0,1095.0,3,3,ok
+2025-09-27,area,neighbourhood_cleansed,Parque Patricios,listing_count,1.0,listings,1.0,,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Parque Patricios,median_valid_price,,ARS,,0.0,1,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Parque Patricios,entire_home_share,1.0,share,1.0,1.0,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Parque Patricios,median_min_nights,3.0,nights,,1.0,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Parque Patricios,pooled_unavailable_day_rate,0.00821917808219178,share,3.0,365.0,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Puerto Madero,listing_count,15.0,listings,15.0,,15,15,ok
+2025-09-27,area,neighbourhood_cleansed,Puerto Madero,median_valid_price,,ARS,,0.0,15,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Puerto Madero,entire_home_share,1.0,share,15.0,15.0,15,15,ok
+2025-09-27,area,neighbourhood_cleansed,Puerto Madero,median_min_nights,3.0,nights,,15.0,15,15,ok
+2025-09-27,area,neighbourhood_cleansed,Puerto Madero,pooled_unavailable_day_rate,0.32273972602739726,share,1767.0,5475.0,15,15,ok
+2025-09-27,area,neighbourhood_cleansed,Recoleta,listing_count,135.0,listings,135.0,,135,135,ok
+2025-09-27,area,neighbourhood_cleansed,Recoleta,median_valid_price,,ARS,,0.0,135,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Recoleta,entire_home_share,0.9629629629629629,share,130.0,135.0,135,135,ok
+2025-09-27,area,neighbourhood_cleansed,Recoleta,median_min_nights,2.0,nights,,135.0,135,135,ok
+2025-09-27,area,neighbourhood_cleansed,Recoleta,pooled_unavailable_day_rate,0.3297818366311517,share,16250.0,49275.0,135,135,ok
+2025-09-27,area,neighbourhood_cleansed,Retiro,listing_count,40.0,listings,40.0,,40,40,ok
+2025-09-27,area,neighbourhood_cleansed,Retiro,median_valid_price,,ARS,,0.0,40,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Retiro,entire_home_share,1.0,share,40.0,40.0,40,40,ok
+2025-09-27,area,neighbourhood_cleansed,Retiro,median_min_nights,2.0,nights,,40.0,40,40,ok
+2025-09-27,area,neighbourhood_cleansed,Retiro,pooled_unavailable_day_rate,0.3476027397260274,share,5075.0,14600.0,40,40,ok
+2025-09-27,area,neighbourhood_cleansed,Saavedra,listing_count,3.0,listings,3.0,,3,3,ok
+2025-09-27,area,neighbourhood_cleansed,Saavedra,median_valid_price,,ARS,,0.0,3,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Saavedra,entire_home_share,1.0,share,3.0,3.0,3,3,ok
+2025-09-27,area,neighbourhood_cleansed,Saavedra,median_min_nights,3.0,nights,,3.0,3,3,ok
+2025-09-27,area,neighbourhood_cleansed,Saavedra,pooled_unavailable_day_rate,0.4100456621004566,share,449.0,1095.0,3,3,ok
+2025-09-27,area,neighbourhood_cleansed,San Cristobal,listing_count,7.0,listings,7.0,,7,7,ok
+2025-09-27,area,neighbourhood_cleansed,San Cristobal,median_valid_price,,ARS,,0.0,7,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,San Cristobal,entire_home_share,0.7142857142857143,share,5.0,7.0,7,7,ok
+2025-09-27,area,neighbourhood_cleansed,San Cristobal,median_min_nights,2.0,nights,,7.0,7,7,ok
+2025-09-27,area,neighbourhood_cleansed,San Cristobal,pooled_unavailable_day_rate,0.21956947162426615,share,561.0,2555.0,7,7,ok
+2025-09-27,area,neighbourhood_cleansed,San Nicolas,listing_count,62.0,listings,62.0,,62,62,ok
+2025-09-27,area,neighbourhood_cleansed,San Nicolas,median_valid_price,,ARS,,0.0,62,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,San Nicolas,entire_home_share,0.8548387096774194,share,53.0,62.0,62,62,ok
+2025-09-27,area,neighbourhood_cleansed,San Nicolas,median_min_nights,2.0,nights,,62.0,62,62,ok
+2025-09-27,area,neighbourhood_cleansed,San Nicolas,pooled_unavailable_day_rate,0.2944321696862572,share,6663.0,22630.0,62,62,ok
+2025-09-27,area,neighbourhood_cleansed,San Telmo,listing_count,34.0,listings,34.0,,34,34,ok
+2025-09-27,area,neighbourhood_cleansed,San Telmo,median_valid_price,,ARS,,0.0,34,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,San Telmo,entire_home_share,0.7058823529411765,share,24.0,34.0,34,34,ok
+2025-09-27,area,neighbourhood_cleansed,San Telmo,median_min_nights,2.0,nights,,34.0,34,34,ok
+2025-09-27,area,neighbourhood_cleansed,San Telmo,pooled_unavailable_day_rate,0.3386784850926672,share,4203.0,12410.0,34,34,ok
+2025-09-27,area,neighbourhood_cleansed,Velez Sarsfield,listing_count,1.0,listings,1.0,,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Velez Sarsfield,median_valid_price,,ARS,,0.0,1,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Velez Sarsfield,entire_home_share,0.0,share,0.0,1.0,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Velez Sarsfield,median_min_nights,7.0,nights,,1.0,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Velez Sarsfield,pooled_unavailable_day_rate,0.7589041095890411,share,277.0,365.0,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Crespo,listing_count,28.0,listings,28.0,,28,28,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Crespo,median_valid_price,,ARS,,0.0,28,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Villa Crespo,entire_home_share,0.75,share,21.0,28.0,28,28,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Crespo,median_min_nights,2.0,nights,,28.0,28,28,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Crespo,pooled_unavailable_day_rate,0.3656555772994129,share,3737.0,10220.0,28,28,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Del Parque,listing_count,5.0,listings,5.0,,5,5,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Del Parque,median_valid_price,,ARS,,0.0,5,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Villa Del Parque,entire_home_share,0.8,share,4.0,5.0,5,5,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Del Parque,median_min_nights,3.0,nights,,5.0,5,5,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Del Parque,pooled_unavailable_day_rate,0.16821917808219178,share,307.0,1825.0,5,5,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Lugano,listing_count,1.0,listings,1.0,,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Lugano,median_valid_price,,ARS,,0.0,1,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Villa Lugano,entire_home_share,0.0,share,0.0,1.0,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Lugano,median_min_nights,1.0,nights,,1.0,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Lugano,pooled_unavailable_day_rate,0.0136986301369863,share,5.0,365.0,1,1,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Ortuzar,listing_count,6.0,listings,6.0,,6,6,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Ortuzar,median_valid_price,,ARS,,0.0,6,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Villa Ortuzar,entire_home_share,0.6666666666666666,share,4.0,6.0,6,6,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Ortuzar,median_min_nights,2.0,nights,,6.0,6,6,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Ortuzar,pooled_unavailable_day_rate,0.24337899543378996,share,533.0,2190.0,6,6,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Urquiza,listing_count,10.0,listings,10.0,,10,10,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Urquiza,median_valid_price,,ARS,,0.0,10,0,not_validated_for_snapshot
+2025-09-27,area,neighbourhood_cleansed,Villa Urquiza,entire_home_share,0.9,share,9.0,10.0,10,10,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Urquiza,median_min_nights,3.0,nights,,10.0,10,10,ok
+2025-09-27,area,neighbourhood_cleansed,Villa Urquiza,pooled_unavailable_day_rate,0.36876712328767125,share,1346.0,3650.0,10,10,ok
+2025-12-29,all,neighbourhood_cleansed,,listing_count,1000.0,listings,1000.0,,1000,1000,ok
+2025-12-29,all,neighbourhood_cleansed,,median_valid_price,,ARS,,0.0,1000,0,not_validated_for_snapshot
+2025-12-29,all,neighbourhood_cleansed,,entire_home_share,0.875,share,875.0,1000.0,1000,1000,ok
+2025-12-29,all,neighbourhood_cleansed,,median_min_nights,2.0,nights,,1000.0,1000,1000,ok
+2025-12-29,all,neighbourhood_cleansed,,pooled_unavailable_day_rate,0.32555616438356166,share,118828.0,365000.0,1000,1000,ok
+2025-12-29,area,neighbourhood_cleansed,Agronomia,listing_count,4.0,listings,4.0,,4,4,ok
+2025-12-29,area,neighbourhood_cleansed,Agronomia,median_valid_price,,ARS,,0.0,4,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Agronomia,entire_home_share,1.0,share,4.0,4.0,4,4,ok
+2025-12-29,area,neighbourhood_cleansed,Agronomia,median_min_nights,1.5,nights,,4.0,4,4,ok
+2025-12-29,area,neighbourhood_cleansed,Agronomia,pooled_unavailable_day_rate,0.26438356164383564,share,386.0,1460.0,4,4,ok
+2025-12-29,area,neighbourhood_cleansed,Almagro,listing_count,45.0,listings,45.0,,45,45,ok
+2025-12-29,area,neighbourhood_cleansed,Almagro,median_valid_price,,ARS,,0.0,45,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Almagro,entire_home_share,0.6888888888888889,share,31.0,45.0,45,45,ok
+2025-12-29,area,neighbourhood_cleansed,Almagro,median_min_nights,2.0,nights,,45.0,45,45,ok
+2025-12-29,area,neighbourhood_cleansed,Almagro,pooled_unavailable_day_rate,0.3380213089802131,share,5552.0,16425.0,45,45,ok
+2025-12-29,area,neighbourhood_cleansed,Balvanera,listing_count,34.0,listings,34.0,,34,34,ok
+2025-12-29,area,neighbourhood_cleansed,Balvanera,median_valid_price,,ARS,,0.0,34,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Balvanera,entire_home_share,0.7647058823529411,share,26.0,34.0,34,34,ok
+2025-12-29,area,neighbourhood_cleansed,Balvanera,median_min_nights,2.0,nights,,34.0,34,34,ok
+2025-12-29,area,neighbourhood_cleansed,Balvanera,pooled_unavailable_day_rate,0.290088638195004,share,3600.0,12410.0,34,34,ok
+2025-12-29,area,neighbourhood_cleansed,Barracas,listing_count,7.0,listings,7.0,,7,7,ok
+2025-12-29,area,neighbourhood_cleansed,Barracas,median_valid_price,,ARS,,0.0,7,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Barracas,entire_home_share,1.0,share,7.0,7.0,7,7,ok
+2025-12-29,area,neighbourhood_cleansed,Barracas,median_min_nights,3.0,nights,,7.0,7,7,ok
+2025-12-29,area,neighbourhood_cleansed,Barracas,pooled_unavailable_day_rate,0.1264187866927593,share,323.0,2555.0,7,7,ok
+2025-12-29,area,neighbourhood_cleansed,Belgrano,listing_count,52.0,listings,52.0,,52,52,ok
+2025-12-29,area,neighbourhood_cleansed,Belgrano,median_valid_price,,ARS,,0.0,52,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Belgrano,entire_home_share,0.8846153846153846,share,46.0,52.0,52,52,ok
+2025-12-29,area,neighbourhood_cleansed,Belgrano,median_min_nights,2.0,nights,,52.0,52,52,ok
+2025-12-29,area,neighbourhood_cleansed,Belgrano,pooled_unavailable_day_rate,0.3969968387776607,share,7535.0,18980.0,52,52,ok
+2025-12-29,area,neighbourhood_cleansed,Boca,listing_count,6.0,listings,6.0,,6,6,ok
+2025-12-29,area,neighbourhood_cleansed,Boca,median_valid_price,,ARS,,0.0,6,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Boca,entire_home_share,1.0,share,6.0,6.0,6,6,ok
+2025-12-29,area,neighbourhood_cleansed,Boca,median_min_nights,2.0,nights,,6.0,6,6,ok
+2025-12-29,area,neighbourhood_cleansed,Boca,pooled_unavailable_day_rate,0.4136986301369863,share,906.0,2190.0,6,6,ok
+2025-12-29,area,neighbourhood_cleansed,Boedo,listing_count,4.0,listings,4.0,,4,4,ok
+2025-12-29,area,neighbourhood_cleansed,Boedo,median_valid_price,,ARS,,0.0,4,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Boedo,entire_home_share,0.5,share,2.0,4.0,4,4,ok
+2025-12-29,area,neighbourhood_cleansed,Boedo,median_min_nights,17.0,nights,,4.0,4,4,ok
+2025-12-29,area,neighbourhood_cleansed,Boedo,pooled_unavailable_day_rate,0.10821917808219178,share,158.0,1460.0,4,4,ok
+2025-12-29,area,neighbourhood_cleansed,Caballito,listing_count,20.0,listings,20.0,,20,20,ok
+2025-12-29,area,neighbourhood_cleansed,Caballito,median_valid_price,,ARS,,0.0,20,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Caballito,entire_home_share,0.85,share,17.0,20.0,20,20,ok
+2025-12-29,area,neighbourhood_cleansed,Caballito,median_min_nights,2.5,nights,,20.0,20,20,ok
+2025-12-29,area,neighbourhood_cleansed,Caballito,pooled_unavailable_day_rate,0.3921917808219178,share,2863.0,7300.0,20,20,ok
+2025-12-29,area,neighbourhood_cleansed,Chacarita,listing_count,18.0,listings,18.0,,18,18,ok
+2025-12-29,area,neighbourhood_cleansed,Chacarita,median_valid_price,,ARS,,0.0,18,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Chacarita,entire_home_share,0.7222222222222222,share,13.0,18.0,18,18,ok
+2025-12-29,area,neighbourhood_cleansed,Chacarita,median_min_nights,3.0,nights,,18.0,18,18,ok
+2025-12-29,area,neighbourhood_cleansed,Chacarita,pooled_unavailable_day_rate,0.3324200913242009,share,2184.0,6570.0,18,18,ok
+2025-12-29,area,neighbourhood_cleansed,Coghlan,listing_count,3.0,listings,3.0,,3,3,ok
+2025-12-29,area,neighbourhood_cleansed,Coghlan,median_valid_price,,ARS,,0.0,3,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Coghlan,entire_home_share,1.0,share,3.0,3.0,3,3,ok
+2025-12-29,area,neighbourhood_cleansed,Coghlan,median_min_nights,1.0,nights,,3.0,3,3,ok
+2025-12-29,area,neighbourhood_cleansed,Coghlan,pooled_unavailable_day_rate,0.2374429223744292,share,260.0,1095.0,3,3,ok
+2025-12-29,area,neighbourhood_cleansed,Colegiales,listing_count,23.0,listings,23.0,,23,23,ok
+2025-12-29,area,neighbourhood_cleansed,Colegiales,median_valid_price,,ARS,,0.0,23,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Colegiales,entire_home_share,0.9130434782608695,share,21.0,23.0,23,23,ok
+2025-12-29,area,neighbourhood_cleansed,Colegiales,median_min_nights,2.0,nights,,23.0,23,23,ok
+2025-12-29,area,neighbourhood_cleansed,Colegiales,pooled_unavailable_day_rate,0.3207861822513401,share,2693.0,8395.0,23,23,ok
+2025-12-29,area,neighbourhood_cleansed,Constitucion,listing_count,13.0,listings,13.0,,13,13,ok
+2025-12-29,area,neighbourhood_cleansed,Constitucion,median_valid_price,,ARS,,0.0,13,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Constitucion,entire_home_share,0.7692307692307693,share,10.0,13.0,13,13,ok
+2025-12-29,area,neighbourhood_cleansed,Constitucion,median_min_nights,2.0,nights,,13.0,13,13,ok
+2025-12-29,area,neighbourhood_cleansed,Constitucion,pooled_unavailable_day_rate,0.2998946259220232,share,1423.0,4745.0,13,13,ok
+2025-12-29,area,neighbourhood_cleansed,Flores,listing_count,5.0,listings,5.0,,5,5,ok
+2025-12-29,area,neighbourhood_cleansed,Flores,median_valid_price,,ARS,,0.0,5,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Flores,entire_home_share,1.0,share,5.0,5.0,5,5,ok
+2025-12-29,area,neighbourhood_cleansed,Flores,median_min_nights,2.0,nights,,5.0,5,5,ok
+2025-12-29,area,neighbourhood_cleansed,Flores,pooled_unavailable_day_rate,0.5364383561643835,share,979.0,1825.0,5,5,ok
+2025-12-29,area,neighbourhood_cleansed,Floresta,listing_count,2.0,listings,2.0,,2,2,ok
+2025-12-29,area,neighbourhood_cleansed,Floresta,median_valid_price,,ARS,,0.0,2,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Floresta,entire_home_share,0.0,share,0.0,2.0,2,2,ok
+2025-12-29,area,neighbourhood_cleansed,Floresta,median_min_nights,1.0,nights,,2.0,2,2,ok
+2025-12-29,area,neighbourhood_cleansed,Floresta,pooled_unavailable_day_rate,0.0,share,0.0,730.0,2,2,ok
+2025-12-29,area,neighbourhood_cleansed,Liniers,listing_count,1.0,listings,1.0,,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Liniers,median_valid_price,,ARS,,0.0,1,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Liniers,entire_home_share,1.0,share,1.0,1.0,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Liniers,median_min_nights,1.0,nights,,1.0,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Liniers,pooled_unavailable_day_rate,0.04657534246575343,share,17.0,365.0,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Monserrat,listing_count,43.0,listings,43.0,,43,43,ok
+2025-12-29,area,neighbourhood_cleansed,Monserrat,median_valid_price,,ARS,,0.0,43,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Monserrat,entire_home_share,0.7209302325581395,share,31.0,43.0,43,43,ok
+2025-12-29,area,neighbourhood_cleansed,Monserrat,median_min_nights,2.0,nights,,43.0,43,43,ok
+2025-12-29,area,neighbourhood_cleansed,Monserrat,pooled_unavailable_day_rate,0.30366358712965913,share,4766.0,15695.0,43,43,ok
+2025-12-29,area,neighbourhood_cleansed,Nuñez,listing_count,13.0,listings,13.0,,13,13,ok
+2025-12-29,area,neighbourhood_cleansed,Nuñez,median_valid_price,,ARS,,0.0,13,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Nuñez,entire_home_share,0.7692307692307693,share,10.0,13.0,13,13,ok
+2025-12-29,area,neighbourhood_cleansed,Nuñez,median_min_nights,2.0,nights,,13.0,13,13,ok
+2025-12-29,area,neighbourhood_cleansed,Nuñez,pooled_unavailable_day_rate,0.43940990516332984,share,2085.0,4745.0,13,13,ok
+2025-12-29,area,neighbourhood_cleansed,Palermo,listing_count,352.0,listings,352.0,,352,352,ok
+2025-12-29,area,neighbourhood_cleansed,Palermo,median_valid_price,,ARS,,0.0,352,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Palermo,entire_home_share,0.9318181818181818,share,328.0,352.0,352,352,ok
+2025-12-29,area,neighbourhood_cleansed,Palermo,median_min_nights,2.0,nights,,352.0,352,352,ok
+2025-12-29,area,neighbourhood_cleansed,Palermo,pooled_unavailable_day_rate,0.3381615815691158,share,43447.0,128480.0,352,352,ok
+2025-12-29,area,neighbourhood_cleansed,Parque Avellaneda,listing_count,1.0,listings,1.0,,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Parque Avellaneda,median_valid_price,,ARS,,0.0,1,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Parque Avellaneda,entire_home_share,1.0,share,1.0,1.0,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Parque Avellaneda,median_min_nights,15.0,nights,,1.0,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Parque Avellaneda,pooled_unavailable_day_rate,0.03287671232876712,share,12.0,365.0,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Parque Chacabuco,listing_count,2.0,listings,2.0,,2,2,ok
+2025-12-29,area,neighbourhood_cleansed,Parque Chacabuco,median_valid_price,,ARS,,0.0,2,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Parque Chacabuco,entire_home_share,1.0,share,2.0,2.0,2,2,ok
+2025-12-29,area,neighbourhood_cleansed,Parque Chacabuco,median_min_nights,1.5,nights,,2.0,2,2,ok
+2025-12-29,area,neighbourhood_cleansed,Parque Chacabuco,pooled_unavailable_day_rate,0.2863013698630137,share,209.0,730.0,2,2,ok
+2025-12-29,area,neighbourhood_cleansed,Parque Chas,listing_count,3.0,listings,3.0,,3,3,ok
+2025-12-29,area,neighbourhood_cleansed,Parque Chas,median_valid_price,,ARS,,0.0,3,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Parque Chas,entire_home_share,0.6666666666666666,share,2.0,3.0,3,3,ok
+2025-12-29,area,neighbourhood_cleansed,Parque Chas,median_min_nights,1.0,nights,,3.0,3,3,ok
+2025-12-29,area,neighbourhood_cleansed,Parque Chas,pooled_unavailable_day_rate,0.3452054794520548,share,378.0,1095.0,3,3,ok
+2025-12-29,area,neighbourhood_cleansed,Parque Patricios,listing_count,1.0,listings,1.0,,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Parque Patricios,median_valid_price,,ARS,,0.0,1,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Parque Patricios,entire_home_share,1.0,share,1.0,1.0,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Parque Patricios,median_min_nights,7.0,nights,,1.0,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Parque Patricios,pooled_unavailable_day_rate,0.1589041095890411,share,58.0,365.0,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Puerto Madero,listing_count,15.0,listings,15.0,,15,15,ok
+2025-12-29,area,neighbourhood_cleansed,Puerto Madero,median_valid_price,,ARS,,0.0,15,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Puerto Madero,entire_home_share,1.0,share,15.0,15.0,15,15,ok
+2025-12-29,area,neighbourhood_cleansed,Puerto Madero,median_min_nights,2.0,nights,,15.0,15,15,ok
+2025-12-29,area,neighbourhood_cleansed,Puerto Madero,pooled_unavailable_day_rate,0.3565296803652968,share,1952.0,5475.0,15,15,ok
+2025-12-29,area,neighbourhood_cleansed,Recoleta,listing_count,135.0,listings,135.0,,135,135,ok
+2025-12-29,area,neighbourhood_cleansed,Recoleta,median_valid_price,,ARS,,0.0,135,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Recoleta,entire_home_share,0.9629629629629629,share,130.0,135.0,135,135,ok
+2025-12-29,area,neighbourhood_cleansed,Recoleta,median_min_nights,2.0,nights,,135.0,135,135,ok
+2025-12-29,area,neighbourhood_cleansed,Recoleta,pooled_unavailable_day_rate,0.31279553526128867,share,15413.0,49275.0,135,135,ok
+2025-12-29,area,neighbourhood_cleansed,Retiro,listing_count,40.0,listings,40.0,,40,40,ok
+2025-12-29,area,neighbourhood_cleansed,Retiro,median_valid_price,,ARS,,0.0,40,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Retiro,entire_home_share,1.0,share,40.0,40.0,40,40,ok
+2025-12-29,area,neighbourhood_cleansed,Retiro,median_min_nights,1.5,nights,,40.0,40,40,ok
+2025-12-29,area,neighbourhood_cleansed,Retiro,pooled_unavailable_day_rate,0.3123972602739726,share,4561.0,14600.0,40,40,ok
+2025-12-29,area,neighbourhood_cleansed,Saavedra,listing_count,3.0,listings,3.0,,3,3,ok
+2025-12-29,area,neighbourhood_cleansed,Saavedra,median_valid_price,,ARS,,0.0,3,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Saavedra,entire_home_share,1.0,share,3.0,3.0,3,3,ok
+2025-12-29,area,neighbourhood_cleansed,Saavedra,median_min_nights,2.0,nights,,3.0,3,3,ok
+2025-12-29,area,neighbourhood_cleansed,Saavedra,pooled_unavailable_day_rate,0.4228310502283105,share,463.0,1095.0,3,3,ok
+2025-12-29,area,neighbourhood_cleansed,San Cristobal,listing_count,7.0,listings,7.0,,7,7,ok
+2025-12-29,area,neighbourhood_cleansed,San Cristobal,median_valid_price,,ARS,,0.0,7,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,San Cristobal,entire_home_share,0.7142857142857143,share,5.0,7.0,7,7,ok
+2025-12-29,area,neighbourhood_cleansed,San Cristobal,median_min_nights,2.0,nights,,7.0,7,7,ok
+2025-12-29,area,neighbourhood_cleansed,San Cristobal,pooled_unavailable_day_rate,0.15107632093933465,share,386.0,2555.0,7,7,ok
+2025-12-29,area,neighbourhood_cleansed,San Nicolas,listing_count,63.0,listings,63.0,,63,63,ok
+2025-12-29,area,neighbourhood_cleansed,San Nicolas,median_valid_price,,ARS,,0.0,63,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,San Nicolas,entire_home_share,0.8412698412698413,share,53.0,63.0,63,63,ok
+2025-12-29,area,neighbourhood_cleansed,San Nicolas,median_min_nights,2.0,nights,,63.0,63,63,ok
+2025-12-29,area,neighbourhood_cleansed,San Nicolas,pooled_unavailable_day_rate,0.27266797129810827,share,6270.0,22995.0,63,63,ok
+2025-12-29,area,neighbourhood_cleansed,San Telmo,listing_count,34.0,listings,34.0,,34,34,ok
+2025-12-29,area,neighbourhood_cleansed,San Telmo,median_valid_price,,ARS,,0.0,34,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,San Telmo,entire_home_share,0.7058823529411765,share,24.0,34.0,34,34,ok
+2025-12-29,area,neighbourhood_cleansed,San Telmo,median_min_nights,2.0,nights,,34.0,34,34,ok
+2025-12-29,area,neighbourhood_cleansed,San Telmo,pooled_unavailable_day_rate,0.301450443190975,share,3741.0,12410.0,34,34,ok
+2025-12-29,area,neighbourhood_cleansed,Velez Sarsfield,listing_count,1.0,listings,1.0,,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Velez Sarsfield,median_valid_price,,ARS,,0.0,1,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Velez Sarsfield,entire_home_share,0.0,share,0.0,1.0,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Velez Sarsfield,median_min_nights,7.0,nights,,1.0,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Velez Sarsfield,pooled_unavailable_day_rate,0.7589041095890411,share,277.0,365.0,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Crespo,listing_count,28.0,listings,28.0,,28,28,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Crespo,median_valid_price,,ARS,,0.0,28,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Villa Crespo,entire_home_share,0.75,share,21.0,28.0,28,28,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Crespo,median_min_nights,2.0,nights,,28.0,28,28,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Crespo,pooled_unavailable_day_rate,0.33894324853228963,share,3464.0,10220.0,28,28,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Del Parque,listing_count,5.0,listings,5.0,,5,5,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Del Parque,median_valid_price,,ARS,,0.0,5,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Villa Del Parque,entire_home_share,0.8,share,4.0,5.0,5,5,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Del Parque,median_min_nights,2.0,nights,,5.0,5,5,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Del Parque,pooled_unavailable_day_rate,0.16986301369863013,share,310.0,1825.0,5,5,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Lugano,listing_count,1.0,listings,1.0,,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Lugano,median_valid_price,,ARS,,0.0,1,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Villa Lugano,entire_home_share,0.0,share,0.0,1.0,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Lugano,median_min_nights,1.0,nights,,1.0,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Lugano,pooled_unavailable_day_rate,0.00821917808219178,share,3.0,365.0,1,1,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Ortuzar,listing_count,6.0,listings,6.0,,6,6,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Ortuzar,median_valid_price,,ARS,,0.0,6,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Villa Ortuzar,entire_home_share,0.6666666666666666,share,4.0,6.0,6,6,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Ortuzar,median_min_nights,1.5,nights,,6.0,6,6,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Ortuzar,pooled_unavailable_day_rate,0.4045662100456621,share,886.0,2190.0,6,6,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Urquiza,listing_count,10.0,listings,10.0,,10,10,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Urquiza,median_valid_price,,ARS,,0.0,10,0,not_validated_for_snapshot
+2025-12-29,area,neighbourhood_cleansed,Villa Urquiza,entire_home_share,0.9,share,9.0,10.0,10,10,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Urquiza,median_min_nights,3.0,nights,,10.0,10,10,ok
+2025-12-29,area,neighbourhood_cleansed,Villa Urquiza,pooled_unavailable_day_rate,0.3473972602739726,share,1268.0,3650.0,10,10,ok
+2026-03-30,all,neighbourhood_cleansed,,listing_count,1000.0,listings,1000.0,,1000,1000,ok
+2026-03-30,all,neighbourhood_cleansed,,median_valid_price,,ARS,,0.0,1000,0,not_validated_for_snapshot
+2026-03-30,all,neighbourhood_cleansed,,entire_home_share,0.875,share,875.0,1000.0,1000,1000,ok
+2026-03-30,all,neighbourhood_cleansed,,median_min_nights,2.0,nights,,1000.0,1000,1000,ok
+2026-03-30,all,neighbourhood_cleansed,,pooled_unavailable_day_rate,0.33631666666666665,share,121074.0,360000.0,1000,1000,ok
+2026-03-30,area,neighbourhood_cleansed,Agronomia,listing_count,4.0,listings,4.0,,4,4,ok
+2026-03-30,area,neighbourhood_cleansed,Agronomia,median_valid_price,,ARS,,0.0,4,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Agronomia,entire_home_share,1.0,share,4.0,4.0,4,4,ok
+2026-03-30,area,neighbourhood_cleansed,Agronomia,median_min_nights,1.5,nights,,4.0,4,4,ok
+2026-03-30,area,neighbourhood_cleansed,Agronomia,pooled_unavailable_day_rate,0.24583333333333332,share,354.0,1440.0,4,4,ok
+2026-03-30,area,neighbourhood_cleansed,Almagro,listing_count,45.0,listings,45.0,,45,45,ok
+2026-03-30,area,neighbourhood_cleansed,Almagro,median_valid_price,,ARS,,0.0,45,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Almagro,entire_home_share,0.6888888888888889,share,31.0,45.0,45,45,ok
+2026-03-30,area,neighbourhood_cleansed,Almagro,median_min_nights,2.0,nights,,45.0,45,45,ok
+2026-03-30,area,neighbourhood_cleansed,Almagro,pooled_unavailable_day_rate,0.3045679012345679,share,4934.0,16200.0,45,45,ok
+2026-03-30,area,neighbourhood_cleansed,Balvanera,listing_count,34.0,listings,34.0,,34,34,ok
+2026-03-30,area,neighbourhood_cleansed,Balvanera,median_valid_price,,ARS,,0.0,34,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Balvanera,entire_home_share,0.7647058823529411,share,26.0,34.0,34,34,ok
+2026-03-30,area,neighbourhood_cleansed,Balvanera,median_min_nights,2.0,nights,,34.0,34,34,ok
+2026-03-30,area,neighbourhood_cleansed,Balvanera,pooled_unavailable_day_rate,0.3443627450980392,share,4215.0,12240.0,34,34,ok
+2026-03-30,area,neighbourhood_cleansed,Barracas,listing_count,7.0,listings,7.0,,7,7,ok
+2026-03-30,area,neighbourhood_cleansed,Barracas,median_valid_price,,ARS,,0.0,7,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Barracas,entire_home_share,1.0,share,7.0,7.0,7,7,ok
+2026-03-30,area,neighbourhood_cleansed,Barracas,median_min_nights,3.0,nights,,7.0,7,7,ok
+2026-03-30,area,neighbourhood_cleansed,Barracas,pooled_unavailable_day_rate,0.1738095238095238,share,438.0,2520.0,7,7,ok
+2026-03-30,area,neighbourhood_cleansed,Belgrano,listing_count,52.0,listings,52.0,,52,52,ok
+2026-03-30,area,neighbourhood_cleansed,Belgrano,median_valid_price,,ARS,,0.0,52,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Belgrano,entire_home_share,0.8846153846153846,share,46.0,52.0,52,52,ok
+2026-03-30,area,neighbourhood_cleansed,Belgrano,median_min_nights,2.0,nights,,52.0,52,52,ok
+2026-03-30,area,neighbourhood_cleansed,Belgrano,pooled_unavailable_day_rate,0.3581730769230769,share,6705.0,18720.0,52,52,ok
+2026-03-30,area,neighbourhood_cleansed,Boca,listing_count,6.0,listings,6.0,,6,6,ok
+2026-03-30,area,neighbourhood_cleansed,Boca,median_valid_price,,ARS,,0.0,6,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Boca,entire_home_share,1.0,share,6.0,6.0,6,6,ok
+2026-03-30,area,neighbourhood_cleansed,Boca,median_min_nights,2.0,nights,,6.0,6,6,ok
+2026-03-30,area,neighbourhood_cleansed,Boca,pooled_unavailable_day_rate,0.4101851851851852,share,886.0,2160.0,6,6,ok
+2026-03-30,area,neighbourhood_cleansed,Boedo,listing_count,4.0,listings,4.0,,4,4,ok
+2026-03-30,area,neighbourhood_cleansed,Boedo,median_valid_price,,ARS,,0.0,4,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Boedo,entire_home_share,0.5,share,2.0,4.0,4,4,ok
+2026-03-30,area,neighbourhood_cleansed,Boedo,median_min_nights,17.0,nights,,4.0,4,4,ok
+2026-03-30,area,neighbourhood_cleansed,Boedo,pooled_unavailable_day_rate,0.09791666666666667,share,141.0,1440.0,4,4,ok
+2026-03-30,area,neighbourhood_cleansed,Caballito,listing_count,20.0,listings,20.0,,20,20,ok
+2026-03-30,area,neighbourhood_cleansed,Caballito,median_valid_price,,ARS,,0.0,20,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Caballito,entire_home_share,0.85,share,17.0,20.0,20,20,ok
+2026-03-30,area,neighbourhood_cleansed,Caballito,median_min_nights,2.0,nights,,20.0,20,20,ok
+2026-03-30,area,neighbourhood_cleansed,Caballito,pooled_unavailable_day_rate,0.41152777777777777,share,2963.0,7200.0,20,20,ok
+2026-03-30,area,neighbourhood_cleansed,Chacarita,listing_count,18.0,listings,18.0,,18,18,ok
+2026-03-30,area,neighbourhood_cleansed,Chacarita,median_valid_price,,ARS,,0.0,18,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Chacarita,entire_home_share,0.7222222222222222,share,13.0,18.0,18,18,ok
+2026-03-30,area,neighbourhood_cleansed,Chacarita,median_min_nights,3.0,nights,,18.0,18,18,ok
+2026-03-30,area,neighbourhood_cleansed,Chacarita,pooled_unavailable_day_rate,0.325,share,2106.0,6480.0,18,18,ok
+2026-03-30,area,neighbourhood_cleansed,Coghlan,listing_count,3.0,listings,3.0,,3,3,ok
+2026-03-30,area,neighbourhood_cleansed,Coghlan,median_valid_price,,ARS,,0.0,3,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Coghlan,entire_home_share,1.0,share,3.0,3.0,3,3,ok
+2026-03-30,area,neighbourhood_cleansed,Coghlan,median_min_nights,3.0,nights,,3.0,3,3,ok
+2026-03-30,area,neighbourhood_cleansed,Coghlan,pooled_unavailable_day_rate,0.20277777777777778,share,219.0,1080.0,3,3,ok
+2026-03-30,area,neighbourhood_cleansed,Colegiales,listing_count,23.0,listings,23.0,,23,23,ok
+2026-03-30,area,neighbourhood_cleansed,Colegiales,median_valid_price,,ARS,,0.0,23,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Colegiales,entire_home_share,0.9130434782608695,share,21.0,23.0,23,23,ok
+2026-03-30,area,neighbourhood_cleansed,Colegiales,median_min_nights,2.0,nights,,23.0,23,23,ok
+2026-03-30,area,neighbourhood_cleansed,Colegiales,pooled_unavailable_day_rate,0.32028985507246377,share,2652.0,8280.0,23,23,ok
+2026-03-30,area,neighbourhood_cleansed,Constitucion,listing_count,13.0,listings,13.0,,13,13,ok
+2026-03-30,area,neighbourhood_cleansed,Constitucion,median_valid_price,,ARS,,0.0,13,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Constitucion,entire_home_share,0.7692307692307693,share,10.0,13.0,13,13,ok
+2026-03-30,area,neighbourhood_cleansed,Constitucion,median_min_nights,2.0,nights,,13.0,13,13,ok
+2026-03-30,area,neighbourhood_cleansed,Constitucion,pooled_unavailable_day_rate,0.33568376068376066,share,1571.0,4680.0,13,13,ok
+2026-03-30,area,neighbourhood_cleansed,Flores,listing_count,5.0,listings,5.0,,5,5,ok
+2026-03-30,area,neighbourhood_cleansed,Flores,median_valid_price,,ARS,,0.0,5,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Flores,entire_home_share,1.0,share,5.0,5.0,5,5,ok
+2026-03-30,area,neighbourhood_cleansed,Flores,median_min_nights,2.0,nights,,5.0,5,5,ok
+2026-03-30,area,neighbourhood_cleansed,Flores,pooled_unavailable_day_rate,0.6055555555555555,share,1090.0,1800.0,5,5,ok
+2026-03-30,area,neighbourhood_cleansed,Floresta,listing_count,2.0,listings,2.0,,2,2,ok
+2026-03-30,area,neighbourhood_cleansed,Floresta,median_valid_price,,ARS,,0.0,2,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Floresta,entire_home_share,0.0,share,0.0,2.0,2,2,ok
+2026-03-30,area,neighbourhood_cleansed,Floresta,median_min_nights,1.0,nights,,2.0,2,2,ok
+2026-03-30,area,neighbourhood_cleansed,Floresta,pooled_unavailable_day_rate,0.0,share,0.0,720.0,2,2,ok
+2026-03-30,area,neighbourhood_cleansed,Liniers,listing_count,1.0,listings,1.0,,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Liniers,median_valid_price,,ARS,,0.0,1,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Liniers,entire_home_share,1.0,share,1.0,1.0,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Liniers,median_min_nights,1.0,nights,,1.0,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Liniers,pooled_unavailable_day_rate,0.0,share,0.0,360.0,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Monserrat,listing_count,43.0,listings,43.0,,43,43,ok
+2026-03-30,area,neighbourhood_cleansed,Monserrat,median_valid_price,,ARS,,0.0,43,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Monserrat,entire_home_share,0.7209302325581395,share,31.0,43.0,43,43,ok
+2026-03-30,area,neighbourhood_cleansed,Monserrat,median_min_nights,2.0,nights,,43.0,43,43,ok
+2026-03-30,area,neighbourhood_cleansed,Monserrat,pooled_unavailable_day_rate,0.31414728682170545,share,4863.0,15480.0,43,43,ok
+2026-03-30,area,neighbourhood_cleansed,Nuñez,listing_count,13.0,listings,13.0,,13,13,ok
+2026-03-30,area,neighbourhood_cleansed,Nuñez,median_valid_price,,ARS,,0.0,13,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Nuñez,entire_home_share,0.7692307692307693,share,10.0,13.0,13,13,ok
+2026-03-30,area,neighbourhood_cleansed,Nuñez,median_min_nights,2.0,nights,,13.0,13,13,ok
+2026-03-30,area,neighbourhood_cleansed,Nuñez,pooled_unavailable_day_rate,0.5286324786324786,share,2474.0,4680.0,13,13,ok
+2026-03-30,area,neighbourhood_cleansed,Palermo,listing_count,352.0,listings,352.0,,352,352,ok
+2026-03-30,area,neighbourhood_cleansed,Palermo,median_valid_price,,ARS,,0.0,352,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Palermo,entire_home_share,0.9318181818181818,share,328.0,352.0,352,352,ok
+2026-03-30,area,neighbourhood_cleansed,Palermo,median_min_nights,2.0,nights,,352.0,352,352,ok
+2026-03-30,area,neighbourhood_cleansed,Palermo,pooled_unavailable_day_rate,0.34187973484848483,share,43323.0,126720.0,352,352,ok
+2026-03-30,area,neighbourhood_cleansed,Parque Avellaneda,listing_count,1.0,listings,1.0,,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Parque Avellaneda,median_valid_price,,ARS,,0.0,1,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Parque Avellaneda,entire_home_share,1.0,share,1.0,1.0,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Parque Avellaneda,median_min_nights,15.0,nights,,1.0,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Parque Avellaneda,pooled_unavailable_day_rate,0.8555555555555555,share,308.0,360.0,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Parque Chacabuco,listing_count,2.0,listings,2.0,,2,2,ok
+2026-03-30,area,neighbourhood_cleansed,Parque Chacabuco,median_valid_price,,ARS,,0.0,2,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Parque Chacabuco,entire_home_share,1.0,share,2.0,2.0,2,2,ok
+2026-03-30,area,neighbourhood_cleansed,Parque Chacabuco,median_min_nights,2.0,nights,,2.0,2,2,ok
+2026-03-30,area,neighbourhood_cleansed,Parque Chacabuco,pooled_unavailable_day_rate,0.32083333333333336,share,231.0,720.0,2,2,ok
+2026-03-30,area,neighbourhood_cleansed,Parque Chas,listing_count,3.0,listings,3.0,,3,3,ok
+2026-03-30,area,neighbourhood_cleansed,Parque Chas,median_valid_price,,ARS,,0.0,3,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Parque Chas,entire_home_share,0.6666666666666666,share,2.0,3.0,3,3,ok
+2026-03-30,area,neighbourhood_cleansed,Parque Chas,median_min_nights,1.0,nights,,3.0,3,3,ok
+2026-03-30,area,neighbourhood_cleansed,Parque Chas,pooled_unavailable_day_rate,0.48703703703703705,share,526.0,1080.0,3,3,ok
+2026-03-30,area,neighbourhood_cleansed,Parque Patricios,listing_count,1.0,listings,1.0,,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Parque Patricios,median_valid_price,,ARS,,0.0,1,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Parque Patricios,entire_home_share,1.0,share,1.0,1.0,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Parque Patricios,median_min_nights,5.0,nights,,1.0,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Parque Patricios,pooled_unavailable_day_rate,0.008333333333333333,share,3.0,360.0,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Puerto Madero,listing_count,15.0,listings,15.0,,15,15,ok
+2026-03-30,area,neighbourhood_cleansed,Puerto Madero,median_valid_price,,ARS,,0.0,15,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Puerto Madero,entire_home_share,1.0,share,15.0,15.0,15,15,ok
+2026-03-30,area,neighbourhood_cleansed,Puerto Madero,median_min_nights,3.0,nights,,15.0,15,15,ok
+2026-03-30,area,neighbourhood_cleansed,Puerto Madero,pooled_unavailable_day_rate,0.4124074074074074,share,2227.0,5400.0,15,15,ok
+2026-03-30,area,neighbourhood_cleansed,Recoleta,listing_count,135.0,listings,135.0,,135,135,ok
+2026-03-30,area,neighbourhood_cleansed,Recoleta,median_valid_price,,ARS,,0.0,135,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Recoleta,entire_home_share,0.9629629629629629,share,130.0,135.0,135,135,ok
+2026-03-30,area,neighbourhood_cleansed,Recoleta,median_min_nights,2.0,nights,,135.0,135,135,ok
+2026-03-30,area,neighbourhood_cleansed,Recoleta,pooled_unavailable_day_rate,0.3244444444444444,share,15768.0,48600.0,135,135,ok
+2026-03-30,area,neighbourhood_cleansed,Retiro,listing_count,40.0,listings,40.0,,40,40,ok
+2026-03-30,area,neighbourhood_cleansed,Retiro,median_valid_price,,ARS,,0.0,40,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Retiro,entire_home_share,1.0,share,40.0,40.0,40,40,ok
+2026-03-30,area,neighbourhood_cleansed,Retiro,median_min_nights,1.5,nights,,40.0,40,40,ok
+2026-03-30,area,neighbourhood_cleansed,Retiro,pooled_unavailable_day_rate,0.34715277777777775,share,4999.0,14400.0,40,40,ok
+2026-03-30,area,neighbourhood_cleansed,Saavedra,listing_count,3.0,listings,3.0,,3,3,ok
+2026-03-30,area,neighbourhood_cleansed,Saavedra,median_valid_price,,ARS,,0.0,3,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Saavedra,entire_home_share,1.0,share,3.0,3.0,3,3,ok
+2026-03-30,area,neighbourhood_cleansed,Saavedra,median_min_nights,2.0,nights,,3.0,3,3,ok
+2026-03-30,area,neighbourhood_cleansed,Saavedra,pooled_unavailable_day_rate,0.42685185185185187,share,461.0,1080.0,3,3,ok
+2026-03-30,area,neighbourhood_cleansed,San Cristobal,listing_count,7.0,listings,7.0,,7,7,ok
+2026-03-30,area,neighbourhood_cleansed,San Cristobal,median_valid_price,,ARS,,0.0,7,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,San Cristobal,entire_home_share,0.7142857142857143,share,5.0,7.0,7,7,ok
+2026-03-30,area,neighbourhood_cleansed,San Cristobal,median_min_nights,3.0,nights,,7.0,7,7,ok
+2026-03-30,area,neighbourhood_cleansed,San Cristobal,pooled_unavailable_day_rate,0.1630952380952381,share,411.0,2520.0,7,7,ok
+2026-03-30,area,neighbourhood_cleansed,San Nicolas,listing_count,63.0,listings,63.0,,63,63,ok
+2026-03-30,area,neighbourhood_cleansed,San Nicolas,median_valid_price,,ARS,,0.0,63,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,San Nicolas,entire_home_share,0.8412698412698413,share,53.0,63.0,63,63,ok
+2026-03-30,area,neighbourhood_cleansed,San Nicolas,median_min_nights,2.0,nights,,63.0,63,63,ok
+2026-03-30,area,neighbourhood_cleansed,San Nicolas,pooled_unavailable_day_rate,0.3093915343915344,share,7017.0,22680.0,63,63,ok
+2026-03-30,area,neighbourhood_cleansed,San Telmo,listing_count,34.0,listings,34.0,,34,34,ok
+2026-03-30,area,neighbourhood_cleansed,San Telmo,median_valid_price,,ARS,,0.0,34,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,San Telmo,entire_home_share,0.7058823529411765,share,24.0,34.0,34,34,ok
+2026-03-30,area,neighbourhood_cleansed,San Telmo,median_min_nights,2.0,nights,,34.0,34,34,ok
+2026-03-30,area,neighbourhood_cleansed,San Telmo,pooled_unavailable_day_rate,0.24558823529411763,share,3006.0,12240.0,34,34,ok
+2026-03-30,area,neighbourhood_cleansed,Velez Sarsfield,listing_count,1.0,listings,1.0,,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Velez Sarsfield,median_valid_price,,ARS,,0.0,1,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Velez Sarsfield,entire_home_share,0.0,share,0.0,1.0,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Velez Sarsfield,median_min_nights,7.0,nights,,1.0,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Velez Sarsfield,pooled_unavailable_day_rate,0.7555555555555555,share,272.0,360.0,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Crespo,listing_count,28.0,listings,28.0,,28,28,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Crespo,median_valid_price,,ARS,,0.0,28,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Villa Crespo,entire_home_share,0.75,share,21.0,28.0,28,28,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Crespo,median_min_nights,2.0,nights,,28.0,28,28,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Crespo,pooled_unavailable_day_rate,0.3798611111111111,share,3829.0,10080.0,28,28,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Del Parque,listing_count,5.0,listings,5.0,,5,5,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Del Parque,median_valid_price,,ARS,,0.0,5,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Villa Del Parque,entire_home_share,0.8,share,4.0,5.0,5,5,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Del Parque,median_min_nights,4.0,nights,,5.0,5,5,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Del Parque,pooled_unavailable_day_rate,0.29444444444444445,share,530.0,1800.0,5,5,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Lugano,listing_count,1.0,listings,1.0,,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Lugano,median_valid_price,,ARS,,0.0,1,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Villa Lugano,entire_home_share,0.0,share,0.0,1.0,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Lugano,median_min_nights,1.0,nights,,1.0,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Lugano,pooled_unavailable_day_rate,0.008333333333333333,share,3.0,360.0,1,1,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Ortuzar,listing_count,6.0,listings,6.0,,6,6,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Ortuzar,median_valid_price,,ARS,,0.0,6,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Villa Ortuzar,entire_home_share,0.6666666666666666,share,4.0,6.0,6,6,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Ortuzar,median_min_nights,1.0,nights,,6.0,6,6,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Ortuzar,pooled_unavailable_day_rate,0.425,share,918.0,2160.0,6,6,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Urquiza,listing_count,10.0,listings,10.0,,10,10,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Urquiza,median_valid_price,,ARS,,0.0,10,0,not_validated_for_snapshot
+2026-03-30,area,neighbourhood_cleansed,Villa Urquiza,entire_home_share,0.9,share,9.0,10.0,10,10,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Urquiza,median_min_nights,3.0,nights,,10.0,10,10,ok
+2026-03-30,area,neighbourhood_cleansed,Villa Urquiza,pooled_unavailable_day_rate,0.45305555555555554,share,1631.0,3600.0,10,10,ok
+2026-06-29,all,neighbourhood_cleansed,,listing_count,1000.0,listings,1000.0,,1000,1000,ok
+2026-06-29,all,neighbourhood_cleansed,,median_valid_price,99214.82,ARS,,956.0,1000,956,partial_coverage
+2026-06-29,all,neighbourhood_cleansed,,entire_home_share,0.875,share,875.0,1000.0,1000,1000,ok
+2026-06-29,all,neighbourhood_cleansed,,median_min_nights,2.0,nights,,1000.0,1000,1000,ok
+2026-06-29,all,neighbourhood_cleansed,,pooled_unavailable_day_rate,0.3487875795479482,share,127154.0,364560.0,1000,1000,ok
+2026-06-29,area,neighbourhood_cleansed,Agronomia,listing_count,4.0,listings,4.0,,4,4,ok
+2026-06-29,area,neighbourhood_cleansed,Agronomia,median_valid_price,68632.16500000001,ARS,,4.0,4,4,ok
+2026-06-29,area,neighbourhood_cleansed,Agronomia,entire_home_share,1.0,share,4.0,4.0,4,4,ok
+2026-06-29,area,neighbourhood_cleansed,Agronomia,median_min_nights,1.5,nights,,4.0,4,4,ok
+2026-06-29,area,neighbourhood_cleansed,Agronomia,pooled_unavailable_day_rate,0.23747426218256693,share,346.0,1457.0,4,4,ok
+2026-06-29,area,neighbourhood_cleansed,Almagro,listing_count,45.0,listings,45.0,,45,45,ok
+2026-06-29,area,neighbourhood_cleansed,Almagro,median_valid_price,74927.25,ARS,,44.0,45,44,partial_coverage
+2026-06-29,area,neighbourhood_cleansed,Almagro,entire_home_share,0.6888888888888889,share,31.0,45.0,45,45,ok
+2026-06-29,area,neighbourhood_cleansed,Almagro,median_min_nights,2.0,nights,,45.0,45,45,ok
+2026-06-29,area,neighbourhood_cleansed,Almagro,pooled_unavailable_day_rate,0.2932537022365775,share,4812.0,16409.0,45,45,ok
+2026-06-29,area,neighbourhood_cleansed,Balvanera,listing_count,34.0,listings,34.0,,34,34,ok
+2026-06-29,area,neighbourhood_cleansed,Balvanera,median_valid_price,71394.0,ARS,,33.0,34,33,partial_coverage
+2026-06-29,area,neighbourhood_cleansed,Balvanera,entire_home_share,0.7647058823529411,share,26.0,34.0,34,34,ok
+2026-06-29,area,neighbourhood_cleansed,Balvanera,median_min_nights,2.0,nights,,34.0,34,34,ok
+2026-06-29,area,neighbourhood_cleansed,Balvanera,pooled_unavailable_day_rate,0.4094246752198822,share,5074.0,12393.0,34,34,ok
+2026-06-29,area,neighbourhood_cleansed,Barracas,listing_count,7.0,listings,7.0,,7,7,ok
+2026-06-29,area,neighbourhood_cleansed,Barracas,median_valid_price,113462.0,ARS,,7.0,7,7,ok
+2026-06-29,area,neighbourhood_cleansed,Barracas,entire_home_share,1.0,share,7.0,7.0,7,7,ok
+2026-06-29,area,neighbourhood_cleansed,Barracas,median_min_nights,3.0,nights,,7.0,7,7,ok
+2026-06-29,area,neighbourhood_cleansed,Barracas,pooled_unavailable_day_rate,0.1414576802507837,share,361.0,2552.0,7,7,ok
+2026-06-29,area,neighbourhood_cleansed,Belgrano,listing_count,52.0,listings,52.0,,52,52,ok
+2026-06-29,area,neighbourhood_cleansed,Belgrano,median_valid_price,99159.0,ARS,,51.0,52,51,partial_coverage
+2026-06-29,area,neighbourhood_cleansed,Belgrano,entire_home_share,0.8846153846153846,share,46.0,52.0,52,52,ok
+2026-06-29,area,neighbourhood_cleansed,Belgrano,median_min_nights,2.0,nights,,52.0,52,52,ok
+2026-06-29,area,neighbourhood_cleansed,Belgrano,pooled_unavailable_day_rate,0.37972544878563885,share,7192.0,18940.0,52,52,ok
+2026-06-29,area,neighbourhood_cleansed,Boca,listing_count,6.0,listings,6.0,,6,6,ok
+2026-06-29,area,neighbourhood_cleansed,Boca,median_valid_price,78795.08499999999,ARS,,6.0,6,6,ok
+2026-06-29,area,neighbourhood_cleansed,Boca,entire_home_share,1.0,share,6.0,6.0,6,6,ok
+2026-06-29,area,neighbourhood_cleansed,Boca,median_min_nights,2.0,nights,,6.0,6,6,ok
+2026-06-29,area,neighbourhood_cleansed,Boca,pooled_unavailable_day_rate,0.4643510054844607,share,1016.0,2188.0,6,6,ok
+2026-06-29,area,neighbourhood_cleansed,Boedo,listing_count,4.0,listings,4.0,,4,4,ok
+2026-06-29,area,neighbourhood_cleansed,Boedo,median_valid_price,41783.395000000004,ARS,,4.0,4,4,ok
+2026-06-29,area,neighbourhood_cleansed,Boedo,entire_home_share,0.5,share,2.0,4.0,4,4,ok
+2026-06-29,area,neighbourhood_cleansed,Boedo,median_min_nights,17.0,nights,,4.0,4,4,ok
+2026-06-29,area,neighbourhood_cleansed,Boedo,pooled_unavailable_day_rate,0.12191780821917808,share,178.0,1460.0,4,4,ok
+2026-06-29,area,neighbourhood_cleansed,Caballito,listing_count,20.0,listings,20.0,,20,20,ok
+2026-06-29,area,neighbourhood_cleansed,Caballito,median_valid_price,92381.5,ARS,,18.0,20,18,partial_coverage
+2026-06-29,area,neighbourhood_cleansed,Caballito,entire_home_share,0.85,share,17.0,20.0,20,20,ok
+2026-06-29,area,neighbourhood_cleansed,Caballito,median_min_nights,2.0,nights,,20.0,20,20,ok
+2026-06-29,area,neighbourhood_cleansed,Caballito,pooled_unavailable_day_rate,0.37765884451763415,share,2752.0,7287.0,20,20,ok
+2026-06-29,area,neighbourhood_cleansed,Chacarita,listing_count,18.0,listings,18.0,,18,18,ok
+2026-06-29,area,neighbourhood_cleansed,Chacarita,median_valid_price,86147.0,ARS,,17.0,18,17,partial_coverage
+2026-06-29,area,neighbourhood_cleansed,Chacarita,entire_home_share,0.7222222222222222,share,13.0,18.0,18,18,ok
+2026-06-29,area,neighbourhood_cleansed,Chacarita,median_min_nights,3.0,nights,,18.0,18,18,ok
+2026-06-29,area,neighbourhood_cleansed,Chacarita,pooled_unavailable_day_rate,0.30697745277269955,share,2015.0,6564.0,18,18,ok
+2026-06-29,area,neighbourhood_cleansed,Coghlan,listing_count,3.0,listings,3.0,,3,3,ok
+2026-06-29,area,neighbourhood_cleansed,Coghlan,median_valid_price,98996.335,ARS,,2.0,3,2,partial_coverage
+2026-06-29,area,neighbourhood_cleansed,Coghlan,entire_home_share,1.0,share,3.0,3.0,3,3,ok
+2026-06-29,area,neighbourhood_cleansed,Coghlan,median_min_nights,3.0,nights,,3.0,3,3,ok
+2026-06-29,area,neighbourhood_cleansed,Coghlan,pooled_unavailable_day_rate,0.5205479452054794,share,570.0,1095.0,3,3,ok
+2026-06-29,area,neighbourhood_cleansed,Colegiales,listing_count,23.0,listings,23.0,,23,23,ok
+2026-06-29,area,neighbourhood_cleansed,Colegiales,median_valid_price,87540.49,ARS,,23.0,23,23,ok
+2026-06-29,area,neighbourhood_cleansed,Colegiales,entire_home_share,0.9130434782608695,share,21.0,23.0,23,23,ok
+2026-06-29,area,neighbourhood_cleansed,Colegiales,median_min_nights,2.0,nights,,23.0,23,23,ok
+2026-06-29,area,neighbourhood_cleansed,Colegiales,pooled_unavailable_day_rate,0.38764312977099236,share,3250.0,8384.0,23,23,ok
+2026-06-29,area,neighbourhood_cleansed,Constitucion,listing_count,13.0,listings,13.0,,13,13,ok
+2026-06-29,area,neighbourhood_cleansed,Constitucion,median_valid_price,98476.5,ARS,,11.0,13,11,partial_coverage
+2026-06-29,area,neighbourhood_cleansed,Constitucion,entire_home_share,0.7692307692307693,share,10.0,13.0,13,13,ok
+2026-06-29,area,neighbourhood_cleansed,Constitucion,median_min_nights,2.0,nights,,13.0,13,13,ok
+2026-06-29,area,neighbourhood_cleansed,Constitucion,pooled_unavailable_day_rate,0.3336848766083105,share,1582.0,4741.0,13,13,ok
+2026-06-29,area,neighbourhood_cleansed,Flores,listing_count,5.0,listings,5.0,,5,5,ok
+2026-06-29,area,neighbourhood_cleansed,Flores,median_valid_price,88390.0,ARS,,5.0,5,5,ok
+2026-06-29,area,neighbourhood_cleansed,Flores,entire_home_share,1.0,share,5.0,5.0,5,5,ok
+2026-06-29,area,neighbourhood_cleansed,Flores,median_min_nights,2.0,nights,,5.0,5,5,ok
+2026-06-29,area,neighbourhood_cleansed,Flores,pooled_unavailable_day_rate,0.4351648351648352,share,792.0,1820.0,5,5,ok
+2026-06-29,area,neighbourhood_cleansed,Floresta,listing_count,2.0,listings,2.0,,2,2,ok
+2026-06-29,area,neighbourhood_cleansed,Floresta,median_valid_price,223572.0,ARS,,2.0,2,2,ok
+2026-06-29,area,neighbourhood_cleansed,Floresta,entire_home_share,0.0,share,0.0,2.0,2,2,ok
+2026-06-29,area,neighbourhood_cleansed,Floresta,median_min_nights,1.0,nights,,2.0,2,2,ok
+2026-06-29,area,neighbourhood_cleansed,Floresta,pooled_unavailable_day_rate,0.0,share,0.0,728.0,2,2,ok
+2026-06-29,area,neighbourhood_cleansed,Liniers,listing_count,1.0,listings,1.0,,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Liniers,median_valid_price,247636.0,ARS,,1.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Liniers,entire_home_share,1.0,share,1.0,1.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Liniers,median_min_nights,1.0,nights,,1.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Liniers,pooled_unavailable_day_rate,0.0,share,0.0,364.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Monserrat,listing_count,43.0,listings,43.0,,43,43,ok
+2026-06-29,area,neighbourhood_cleansed,Monserrat,median_valid_price,84994.0,ARS,,43.0,43,43,ok
+2026-06-29,area,neighbourhood_cleansed,Monserrat,entire_home_share,0.7209302325581395,share,31.0,43.0,43,43,ok
+2026-06-29,area,neighbourhood_cleansed,Monserrat,median_min_nights,2.0,nights,,43.0,43,43,ok
+2026-06-29,area,neighbourhood_cleansed,Monserrat,pooled_unavailable_day_rate,0.3017736378716346,share,4730.0,15674.0,43,43,ok
+2026-06-29,area,neighbourhood_cleansed,Nuñez,listing_count,13.0,listings,13.0,,13,13,ok
+2026-06-29,area,neighbourhood_cleansed,Nuñez,median_valid_price,125928.5,ARS,,13.0,13,13,ok
+2026-06-29,area,neighbourhood_cleansed,Nuñez,entire_home_share,0.7692307692307693,share,10.0,13.0,13,13,ok
+2026-06-29,area,neighbourhood_cleansed,Nuñez,median_min_nights,2.0,nights,,13.0,13,13,ok
+2026-06-29,area,neighbourhood_cleansed,Nuñez,pooled_unavailable_day_rate,0.4273341782847486,share,2023.0,4734.0,13,13,ok
+2026-06-29,area,neighbourhood_cleansed,Palermo,listing_count,352.0,listings,352.0,,352,352,ok
+2026-06-29,area,neighbourhood_cleansed,Palermo,median_valid_price,110869.5,ARS,,331.0,352,331,partial_coverage
+2026-06-29,area,neighbourhood_cleansed,Palermo,entire_home_share,0.9318181818181818,share,328.0,352.0,352,352,ok
+2026-06-29,area,neighbourhood_cleansed,Palermo,median_min_nights,2.0,nights,,352.0,352,352,ok
+2026-06-29,area,neighbourhood_cleansed,Palermo,pooled_unavailable_day_rate,0.36622648124342644,share,47007.0,128355.0,352,352,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Avellaneda,listing_count,1.0,listings,1.0,,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Avellaneda,median_valid_price,55273.0,ARS,,1.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Avellaneda,entire_home_share,1.0,share,1.0,1.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Avellaneda,median_min_nights,15.0,nights,,1.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Avellaneda,pooled_unavailable_day_rate,0.6071428571428571,share,221.0,364.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Chacabuco,listing_count,2.0,listings,2.0,,2,2,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Chacabuco,median_valid_price,133155.5,ARS,,2.0,2,2,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Chacabuco,entire_home_share,1.0,share,2.0,2.0,2,2,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Chacabuco,median_min_nights,2.0,nights,,2.0,2,2,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Chacabuco,pooled_unavailable_day_rate,0.5260989010989011,share,383.0,728.0,2,2,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Chas,listing_count,4.0,listings,4.0,,4,4,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Chas,median_valid_price,52502.0,ARS,,3.0,4,3,partial_coverage
+2026-06-29,area,neighbourhood_cleansed,Parque Chas,entire_home_share,0.5,share,2.0,4.0,4,4,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Chas,median_min_nights,1.0,nights,,4.0,4,4,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Chas,pooled_unavailable_day_rate,0.3379026730637423,share,493.0,1459.0,4,4,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Patricios,listing_count,1.0,listings,1.0,,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Patricios,median_valid_price,203978.25,ARS,,1.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Patricios,entire_home_share,1.0,share,1.0,1.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Patricios,median_min_nights,4.0,nights,,1.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Parque Patricios,pooled_unavailable_day_rate,0.01098901098901099,share,4.0,364.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Puerto Madero,listing_count,15.0,listings,15.0,,15,15,ok
+2026-06-29,area,neighbourhood_cleansed,Puerto Madero,median_valid_price,196614.81,ARS,,15.0,15,15,ok
+2026-06-29,area,neighbourhood_cleansed,Puerto Madero,entire_home_share,1.0,share,15.0,15.0,15,15,ok
+2026-06-29,area,neighbourhood_cleansed,Puerto Madero,median_min_nights,2.0,nights,,15.0,15,15,ok
+2026-06-29,area,neighbourhood_cleansed,Puerto Madero,pooled_unavailable_day_rate,0.45306495882891124,share,2476.0,5465.0,15,15,ok
+2026-06-29,area,neighbourhood_cleansed,Recoleta,listing_count,135.0,listings,135.0,,135,135,ok
+2026-06-29,area,neighbourhood_cleansed,Recoleta,median_valid_price,114744.0,ARS,,127.0,135,127,partial_coverage
+2026-06-29,area,neighbourhood_cleansed,Recoleta,entire_home_share,0.9629629629629629,share,130.0,135.0,135,135,ok
+2026-06-29,area,neighbourhood_cleansed,Recoleta,median_min_nights,2.0,nights,,135.0,135,135,ok
+2026-06-29,area,neighbourhood_cleansed,Recoleta,pooled_unavailable_day_rate,0.33648884735708773,share,16564.0,49226.0,135,135,ok
+2026-06-29,area,neighbourhood_cleansed,Retiro,listing_count,40.0,listings,40.0,,40,40,ok
+2026-06-29,area,neighbourhood_cleansed,Retiro,median_valid_price,100291.0,ARS,,39.0,40,39,partial_coverage
+2026-06-29,area,neighbourhood_cleansed,Retiro,entire_home_share,1.0,share,40.0,40.0,40,40,ok
+2026-06-29,area,neighbourhood_cleansed,Retiro,median_min_nights,1.5,nights,,40.0,40,40,ok
+2026-06-29,area,neighbourhood_cleansed,Retiro,pooled_unavailable_day_rate,0.31548272078990675,share,4601.0,14584.0,40,40,ok
+2026-06-29,area,neighbourhood_cleansed,Saavedra,listing_count,3.0,listings,3.0,,3,3,ok
+2026-06-29,area,neighbourhood_cleansed,Saavedra,median_valid_price,85163.0,ARS,,2.0,3,2,partial_coverage
+2026-06-29,area,neighbourhood_cleansed,Saavedra,entire_home_share,1.0,share,3.0,3.0,3,3,ok
+2026-06-29,area,neighbourhood_cleansed,Saavedra,median_min_nights,2.0,nights,,3.0,3,3,ok
+2026-06-29,area,neighbourhood_cleansed,Saavedra,pooled_unavailable_day_rate,0.38278388278388276,share,418.0,1092.0,3,3,ok
+2026-06-29,area,neighbourhood_cleansed,San Cristobal,listing_count,7.0,listings,7.0,,7,7,ok
+2026-06-29,area,neighbourhood_cleansed,San Cristobal,median_valid_price,67990.5,ARS,,7.0,7,7,ok
+2026-06-29,area,neighbourhood_cleansed,San Cristobal,entire_home_share,0.7142857142857143,share,5.0,7.0,7,7,ok
+2026-06-29,area,neighbourhood_cleansed,San Cristobal,median_min_nights,2.0,nights,,7.0,7,7,ok
+2026-06-29,area,neighbourhood_cleansed,San Cristobal,pooled_unavailable_day_rate,0.27440219521756176,share,700.0,2551.0,7,7,ok
+2026-06-29,area,neighbourhood_cleansed,San Nicolas,listing_count,63.0,listings,63.0,,63,63,ok
+2026-06-29,area,neighbourhood_cleansed,San Nicolas,median_valid_price,87411.0,ARS,,62.0,63,62,partial_coverage
+2026-06-29,area,neighbourhood_cleansed,San Nicolas,entire_home_share,0.8412698412698413,share,53.0,63.0,63,63,ok
+2026-06-29,area,neighbourhood_cleansed,San Nicolas,median_min_nights,2.0,nights,,63.0,63,63,ok
+2026-06-29,area,neighbourhood_cleansed,San Nicolas,pooled_unavailable_day_rate,0.3038349366647804,share,6980.0,22973.0,63,63,ok
+2026-06-29,area,neighbourhood_cleansed,San Telmo,listing_count,34.0,listings,34.0,,34,34,ok
+2026-06-29,area,neighbourhood_cleansed,San Telmo,median_valid_price,86691.67,ARS,,33.0,34,33,partial_coverage
+2026-06-29,area,neighbourhood_cleansed,San Telmo,entire_home_share,0.7058823529411765,share,24.0,34.0,34,34,ok
+2026-06-29,area,neighbourhood_cleansed,San Telmo,median_min_nights,2.0,nights,,34.0,34,34,ok
+2026-06-29,area,neighbourhood_cleansed,San Telmo,pooled_unavailable_day_rate,0.26849536103267446,share,3328.0,12395.0,34,34,ok
+2026-06-29,area,neighbourhood_cleansed,Velez Sarsfield,listing_count,1.0,listings,1.0,,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Velez Sarsfield,median_valid_price,37396.06,ARS,,1.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Velez Sarsfield,entire_home_share,0.0,share,0.0,1.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Velez Sarsfield,median_min_nights,7.0,nights,,1.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Velez Sarsfield,pooled_unavailable_day_rate,0.7582417582417582,share,276.0,364.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Crespo,listing_count,28.0,listings,28.0,,28,28,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Crespo,median_valid_price,82924.68,ARS,,28.0,28,28,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Crespo,entire_home_share,0.75,share,21.0,28.0,28,28,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Crespo,median_min_nights,2.0,nights,,28.0,28,28,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Crespo,pooled_unavailable_day_rate,0.41772027834950504,share,4262.0,10203.0,28,28,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Del Parque,listing_count,5.0,listings,5.0,,5,5,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Del Parque,median_valid_price,45419.055,ARS,,4.0,5,4,partial_coverage
+2026-06-29,area,neighbourhood_cleansed,Villa Del Parque,entire_home_share,0.8,share,4.0,5.0,5,5,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Del Parque,median_min_nights,4.0,nights,,5.0,5,5,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Del Parque,pooled_unavailable_day_rate,0.265642151481888,share,484.0,1822.0,5,5,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Lugano,listing_count,1.0,listings,1.0,,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Lugano,median_valid_price,49289.0,ARS,,1.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Lugano,entire_home_share,0.0,share,0.0,1.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Lugano,median_min_nights,1.0,nights,,1.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Lugano,pooled_unavailable_day_rate,0.008241758241758242,share,3.0,364.0,1,1,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Ortuzar,listing_count,5.0,listings,5.0,,5,5,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Ortuzar,median_valid_price,68840.0,ARS,,5.0,5,5,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Ortuzar,entire_home_share,0.8,share,4.0,5.0,5,5,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Ortuzar,median_min_nights,2.0,nights,,5.0,5,5,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Ortuzar,pooled_unavailable_day_rate,0.4978021978021978,share,906.0,1820.0,5,5,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Urquiza,listing_count,10.0,listings,10.0,,10,10,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Urquiza,median_valid_price,97488.0,ARS,,10.0,10,10,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Urquiza,entire_home_share,0.9,share,9.0,10.0,10,10,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Urquiza,median_min_nights,3.0,nights,,10.0,10,10,ok
+2026-06-29,area,neighbourhood_cleansed,Villa Urquiza,pooled_unavailable_day_rate,0.3721505081021697,share,1355.0,3641.0,10,10,ok
